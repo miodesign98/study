@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>photoshop_milli</title>
+    <style>
+        @font-face {
+            font-family: 'Pretendard';
+            font-weight: 700;
+            font-display: swap;
+            src: local('Pretendard Bold'), url(./woff2/Pretendard-Bold.woff2) format('woff2'), url(./woff/Pretendard-Bold.woff) format('woff');
+        }
+
+        @font-face {
+            font-family: 'Pretendard';
+            font-weight: 400;
+            font-display: swap;
+            src: local('Pretendard Regular'), url(./woff2/Pretendard-Regular.woff2) format('woff2'), url(./woff/Pretendard-Regular.woff) format('woff');
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #333;
+        }
+
+        .warp {
+            width: 402px;
+            background-color: #fff;
+            margin: 0 auto;
+            color: #333;
+        }
+
+        .warp .logo {
+            padding: 20px 16px;
+            margin-bottom: 20px;
+
+        }
+
+        .warp .logo img {
+            width: 50px;
+        }
+
+        .warp .contents {
+            display: flex;
+            gap: 10px;
+            margin-left: 16px;
+        }
+
+        .warp .contents li {
+            list-style: none;
+            font-size: 16px;
+            font-family: 'Pretendard';
+            font-weight: 700;
+        }
+
+        .section1 {
+            width: 370px;
+            margin: 0 auto;
+            margin-top: 40px;
+        }
+
+        .section1 .text h1 {
+            font-size: 20px;
+            font-family: 'Pretendard';
+            font-weight: 700;
+        }
+
+        .section1 .text p {
+            font-size: 14px;
+            font-family: 'Pretendard';
+            font-weight: 400;
+        }
+
+        .section1 .main {
+            margin-top: 18px;
+        }
+
+        .section1 .main img {
+            width: 100%;
+        }
+
+        .section1 .main p {
+            font-size: 16px;
+            font-family: 'Pretendard';
+            font-weight: 700;
+        }
+
+        .section2 {
+            width: 370px;
+            margin: 0 auto;
+            margin-top: 60px;
+        }
+
+        .section2 h1 {
+            font-size: 20px;
+            font-family: 'Pretendard';
+            font-weight: 700;
+        }
+
+        .section2 p {
+            font-size: 14px;
+            font-family: 'Pretendard';
+            font-weight: 400;
+            color: #555;
+        }
+
+        .section2 .item {
+            width: 100%;
+            background-color: #f5f5f5;
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+
+        .section2 .item img {
+            width: 100%;
+        }
+
+        .section2 .item .main {
+            display: flex;
+            justify-content: flex-start;
+            margin: 10px 16px;
+            gap: 10px;
+        }
+
+        .section2 .item .main img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .section2 .item .main .text h2 {
+            font-size: 16px;
+            font-family: 'Pretendard';
+            font-weight: 700;
+        }
+
+        .section2 .item .main .text p {
+            font-size: 14px; 
+            font-family: 'Pretendard';
+            font-weight: 700;
+        }
+
+        .section2 .item .p {
+            font-size: 12px;
+            font-family: 'Pretendard';
+            font-weight: 400;
+            padding: 10px 20px ;
+            box-sizing: border-box;
+        }
+        
+        .section3{
+            width: 370px;
+            margin: 0 auto;
+            margin-top: 60px;
+        }
+        .section3 h1{
+            font-size: 20px;
+            font-family: 'Pretendard';
+            font-weight: 700;
+        }
+        .section3 p{
+            font-size: 14px;
+            font-family: 'Pretendard';
+            font-weight: 400;
+            color: #555;
+        }
+        .section3 .item{
+            width: 100%;
+            box-shadow: 3px 3px 10px #adadad;
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+        .section3 .item .big{
+            width: 100%;
+            height: 200px;
+        }
+
+        .section3 .item .text{
+            padding: 16px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .section3 .item .text .title{
+            width: 100%;
+            border-bottom: 1px solid #555;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+        }
+        .section3 .item .text .title h2{
+            font-size: 16px;
+            font-family: 'Pretendard';
+            font-weight: 700;
+        }
+        .section3 .item .text .title p{
+            font-size: 14px;
+            font-family: 'Pretendard';
+            font-weight: 400;
+        }
+        .section3 .item .text .profile{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section3 .item .text .profile .small{
+            width: 26px;
+            height: 26px;
+        }
+
+        .section3 .item .text .profile p{
+            font-size: 14px;
+            font-family: 'Pretendard';
+            font-weight: 700;
+        }
+
+        .section4{
+            width: 370px;
+            margin: 0 auto;
+            box-shadow: 3px 3px 10px #adadad;
+            margin-top: 60px;
+            border-radius: 12px;
+            padding: 20px;
+            box-sizing: border-box;
+
+            
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section4 .img{
+            width: 42px;
+            height: 42px;
+        }
+        .section4 .p{
+            font-size: 14px;
+            font-family: 'Pretendard';
+            font-weight: 400;
+        }
+        
+        .section5{
+            width: 370px;
+            margin: 40px 0 ;
+            padding: 16px;
+        }
+
+        .section5 h1{
+            font-size: 20px;
+            font-family: 'Pretendard';
+            font-weight: 700;
+        }
+        .section5 .item{
+            margin-top: 18px;
+            display: flex;
+            justify-content: space-between;
+            
+        }
+        .section5 .item .box{
+            position: relative;
+        }
+        .section5 .item .box img{
+            width: 177px;
+            object-fit: cover;
+        }
+
+        .section5 .item .box span{
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            background-color: #555555b6;
+            backdrop-filter: blur(5px);
+            color: #fff;
+            font-size: 10px;
+            font-family: 'Pretendard';
+            font-weight: 700;
+           
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .section5 .item .box h2{
+            font-size: 16px;
+            font-family: 'Pretendard';
+            font-weight: 700;
+        }
+        .section5 .item .box p{
+            font-size: 14px;
+            font-family: 'Pretendard';
+            font-weight: 400;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="warp">
+        <div class="logo">
+            <img src="img/밀리의서재/logo.png" alt="logo">
+        </div><!-- logo end -->
+        <ul class="contents">
+            <li>NOW</li>
+            <li>밀리로드</li>
+            <li>스토리</li>
+            <li>오디오북</li>
+        </ul>
+
+        <div class="section1">
+            <div class="text">
+                <h1>올타임 레전드</h1>
+                <P>베스트 중의 베스트, 한번에 모아봤어요</P>
+            </div><!-- text end -->
+            <div class="main">
+                <img src="img/밀리의서재/올타임레전드.jpg" alt="img1">
+                <p>2024년 밀리 회원들이 가장 사랑한 책 7선</p>
+            </div><!-- main end -->
+        </div><!-- section1 end -->
+
+        <div class="section2">
+            <h1>오늘 읽어야 할 단 한 권</h1>
+            <p>02월 04일 화요일 업데이트</p>
+            <div class="item">
+                <img src="img/밀리의서재/오늘추천도서.png" alt="book">
+                <div class="main">
+                    <img src="img/밀리의서재/로라의선택.png" alt="lora">
+                    <div class="text">
+                        <h2>예쁜 문장 수집가 콘텐츠 매니저</h2>
+                        <p>로라의 선택</p>
+                    </div><!-- text -->
+                </div><!-- main end -->
+                <p class="p">“상대가 나에게 속마음을 털어놓게 하고 싶으면, 이 책을 당장<br>
+                    열어보세요! 단 5분 안에 신뢰관계로 만드는 방법을 알 수
+                    있어요”</p>
+            </div><!-- item end -->
+        </div><!-- section2 end -->
+
+        <div class="section3">
+            <h1>이것만 읽어도 책책박사</h1>
+            <p>독서 트렌드 여기서 볼 수 있어요</p>
+            <div class="item">
+                <img class="big" src="img/밀리의서재/이미지.jpg" alt="book2">
+                <div class="text">
+                    <div class="title">
+                        <h2>지난 달, 밀리 별점이 가장 높았던 책 BEST5</h2>
+                        <p>🐍푸른 뱀의 해, 2025년이 시작된 지도 벌써 한 달이 지나...</p>
+                    </div><!-- title end -->
+              
+                    <div class="profile">
+                        <img class="small" src="img/밀리의서재/밀리의이미지.png" alt="profile">
+                        <p>밀리 독서연구소</p>
+                    </div><!-- profile end -->
+                </div><!-- text end -->
+            </div><!-- item end -->
+
+        </div><!-- section3 end -->
+
+        <div class="section4">
+            <img src="img/밀리의서재/추천책이미지.png" alt="">
+            <p>어떤 책을 추천받고 싶나요?</p>
+        </div><!-- section4 end -->
+
+        <div class="section5">
+            <h1>밀리 오리지널 로맨스</h1>
+            <div class="item">
+                <div class="box">
+                    <img src="img/밀리의서재/여름이돌아오면.png" alt="">
+                    <span>1</span>
+                    <h2>[독점] 여름이 돌아오면</h2>
+                    <p>송민선</p>
+                </div><!-- box end -->
+
+                <div class="box">
+                    <img src="img/밀리의서재/라일락눈꽃.jpg" alt="">
+                    <span>2</span>
+                    <h2>[독점] 라일락 눈꽃</h2>
+                    <p>나자혜</p>
+                </div><!-- box end -->
+            </div><!-- item end -->
+        </div><!-- section5 end -->
+    </div>
+</body>
+
+</html>

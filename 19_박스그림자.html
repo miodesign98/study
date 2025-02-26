@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박스그림자</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .shadow div {
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            margin: 50px;
+        }
+        .shadow div:first-child {
+            box-shadow: 10px 40px 20px teal;
+        }
+        .shadow div:nth-child(2) {
+            box-shadow: -10px -40px 20px red;
+        }
+        .shadow div:nth-child(3) {
+            box-shadow: 5px 5px 10px red,
+                        10px 10px 5px greenyellow,
+                        20px 20px 10px plum,
+                        -10px -10px 20px purple;
+        }
+        .shadow div:nth-child(4) {
+            box-shadow: inset 20px 40px 10px rgba(255, 166, 0, 0.709);
+        }
+        .shadow div:nth-child(5) {
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.84);
+        }
+    </style>
+</head>
+<body>
+    <div class="shadow">
+        <div>그림자 1</div>
+        <div>그림자 2</div>
+        <div>그림자 3</div>
+        <div>그림자 4</div>
+        <div>그림자 5</div>
+    </div><!-- .shadow end -->
+</body>
+</html>

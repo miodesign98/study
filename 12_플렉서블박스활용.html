@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플렉서블 활용</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box01{
+            width: 590px;
+            height: 380px;
+            background-color: pink;
+            padding: 30px;
+            box-sizing: border-box;
+            border-radius: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-end;
+        }
+        .box01 h1{
+            width: 100%;
+        }
+        .box01 p{
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .box02{
+            width: 370px;
+            border: 1px solid black;
+            margin: 30px;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .box02 img{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+        .box02 .text{
+            width: 200px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="box01">
+        <h1>보기만 해도 기분좋은<br>2025년 황금연휴</h1>
+        <p>지금부터 시작하는 여행 플랜<br>좌석 선점 필수!</p>
+    </div><!-- box01_end -->
+ 
+    <div class="box02">
+        <img src="img/침구.jpg" alt="침구">
+        <div class="text">
+            <p>한국, 내륙</p>
+            <h1>노란색 아기 산수유가 예뻤던 구례 당일치기 기차여행</h1>
+        </div>
+    </div><!-- box02_end -->
+</body>
+
+</html>

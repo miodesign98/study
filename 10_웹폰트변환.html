@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹폰트 변환</title>
+    <style>
+        @font-face {
+            font-family: 'GmarketSans';
+            src: url('font/gmarket/GmarketSansBold.woff2') format('woff2'),
+                url('font/gmarket/GmarketSansBold.woff') format('woff');
+            font-weight: bold;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'GmarketSans';
+            src: url('font/gmarket/GmarketSansMedium.woff2') format('woff2'),
+                url('font/gmarket/GmarketSansMedium.woff') format('woff');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'GmarketSans';
+            src: url('font/gmarket/GmarketSansLight.woff2') format('woff2'),
+                url('font/gmarket/GmarketSansLight.woff') format('woff');
+            font-weight: 300;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+    font-family: 'S-Core Dream';
+    src: url('font/S_Core_Dream/S-CoreDream-8Heavy.woff2') format('woff2'),
+        url('font/S_Core_Dream/S-CoreDream-8Heavy.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'S-Core Dream';
+    src: url('font/S_Core_Dream/S-CoreDream-7ExtraBold.woff2') format('woff2'),
+        url('font/S_Core_Dream/S-CoreDream-7ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'S-Core Dream';
+    src: url('font/S_Core_Dream/S-CoreDream-9Black.woff2') format('woff2'),
+        url('font/S_Core_Dream/S-CoreDream-9Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'S-Core Dream';
+    src: url('font/S_Core_Dream/S-CoreDream-2ExtraLight.woff2') format('woff2'),
+        url('font/S_Core_Dream/S-CoreDream-2ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'S-Core Dream';
+    src: url('font/S_Core_Dream/S-CoreDream-1Thin.woff2') format('woff2'),
+        url('font/S_Core_Dream/S-CoreDream-1Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'S-Core Dream';
+    src: url('font/S_Core_Dream/S-CoreDream-3Light.woff2') format('woff2'),
+        url('font/S_Core_Dream/S-CoreDream-3Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'S-Core Dream';
+    src: url('font/S_Core_Dream/S-CoreDream-4Regular.woff2') format('woff2'),
+        url('font/S_Core_Dream/S-CoreDream-4Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'S-Core Dream';
+    src: url('font/S_Core_Dream/S-CoreDream-5Medium.woff2') format('woff2'),
+        url('font/S_Core_Dream/S-CoreDream-5Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'S-Core Dream';
+    src: url('font/S_Core_Dream/S-CoreDream-6Bold.woff2') format('woff2'),
+        url('font/S_Core_Dream/S-CoreDream-6Bold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .font p {
+            font-size: 30px;
+        }
+
+        .font p:nth-child(1){
+            font-family: 'GmarketSans';
+            font-weight: 300;
+        }
+        .font p:nth-child(2){
+            font-family: 'GmarketSansM';
+            font-weight: 500;
+        }
+        .font p:nth-child(3){
+            font-family: 'GmarketSans';
+            font-weight: bold;
+        }
+        .font2 p{
+            font-size: 30px;
+        }
+        .font2 p:nth-child(1){
+            font-family: 'S-Core Dream';
+            font-weight: 100;
+        }
+
+        .font2 p:nth-child(2){
+            font-family: 'S-Core Dream';
+            font-weight: 300;
+        }
+        .font2 p:nth-child(3){
+            font-family: 'S-Core Dream';
+            font-weight: 500;
+        }
+        .font2 p:nth-child(4){
+            font-family: 'S-Core Dream';
+            font-weight: bold;
+        }
+        .font2 p:nth-child(5){
+            font-family: 'S-Core Dream';
+            font-weight: 900;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="font">
+        <p>웹폰트 변환1</p>
+        <p>웹폰트 변환2</p>
+        <p>웹폰트 변환3</p>
+    </div>
+
+    <div class="font2">
+        <p>나는 에스코어드림 폰트가 좋더라1</p>
+        <p>나는 에스코어드림 폰트가 좋더라2</p>
+        <p>나는 에스코어드림 폰트가 좋더라3</p>
+        <p>나는 에스코어드림 폰트가 좋더라4</p>
+        <p>나는 에스코어드림 폰트가 좋더라5</p>
+    </div>
+</body>
+
+</html>

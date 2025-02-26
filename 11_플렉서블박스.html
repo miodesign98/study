@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플렉서블 박스</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        div {
+            background-color: aquamarine;
+            margin: 50px;
+            padding: 50px;
+        }
+
+        div ul {
+            background-color: white;
+            border: 1px solid black;
+        }
+
+        div ul li {
+            background-color: yellow;
+            border: 1px solid red;
+        }
+
+        .flex01 ul {
+            display: flex;/* 이 코드를 넣지않으면 플렉스 배치 자체가 안됨(필수) */
+            justify-content: space-between;
+            /* p110 - space-evenly 코드가 추가됨(책 출시이후) */
+            /* flex-start(기본값)
+                center
+                flex-end
+                space-between(개체의 양끝에 여백이 없음)
+                space-around(개체의 중간 여백의 절반만큼 양끝에 여백이 생김)
+                space-evenly(개체의 중간여백만큼 양끝에 여백이 생김) */
+        }
+
+        .flex02 ul {
+            display: flex;
+            align-items: flex-start;
+            /* p.112 
+            stretch(기본값:박스를 확장해서 배치)
+            flex-start(위로 정렬)
+            flex-end(아래로 정렬)
+            center(중앙 정렬)*/
+        }
+
+        .flex02 ul li:first-child {
+            height: 300px;
+        }
+
+        .flex02 ul li:nth-child(2) {
+            height: 200px;
+        }
+
+        .flex03 ul {
+            display: flex;
+            flex-wrap: wrap-reverse;
+            /* 이 코드를 적용하지 않으면 자동으로 확장되서 수직으로 생성되지않음 */
+            /* wrap은 1,2,3순서로 / wrap-reverse는 반대순서 3.2.1순서로 진행 */
+            height: 300px;
+            align-content: space-between;
+            /* p.116 
+              justify-content랑 동일하게 적용됨
+              flex-start(기본값)
+                center
+                flex-end
+                space-between(개체의 양끝에 여백이 없음)
+                space-around(개체의 중간 여백의 절반만큼 양끝에 여백이 생김)
+                space-evenly(개체의 중간여백만큼 양끝에 여백이 생김)*/
+        }
+
+        .flex03 ul li {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex01">
+        <h1>수평정렬</h1>
+        <ul>
+            <li>item1</li>
+            <li>item2</li>
+            <li>item3</li>
+        </ul>
+    </div><!--flex01_end-->
+
+    <div class="flex02">
+        <h1>수직정렬</h1>
+        <ul>
+            <li>item1</li>
+            <li>item2</li>
+            <li>item3</li>
+        </ul>
+    </div><!--flex02_end-->
+
+    <div class="flex03">
+        <h1>여러줄수직정렬</h1>
+        <ul>
+            <li>item1</li>
+            <li>item2</li>
+            <li>item3</li>
+        </ul>
+    </div><!--flex03_end-->
+</body>
+
+</html>

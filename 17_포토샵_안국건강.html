@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포토샵_안국건강</title>
+    <style>
+        @font-face {
+            font-family: 'Noto Sans KR';
+            src: url('NotoSansKR-Bold.woff2') format('woff2'),
+                url('NotoSansKR-Bold.woff') format('woff');
+            font-weight: bold;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Noto Sans KR';
+            src: url('NotoSansKR-Medium.woff2') format('woff2'),
+                url('NotoSansKR-Medium.woff') format('woff');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f3f0eb;
+            line-height: 1;
+        }
+
+        .section01 {
+            width: 1200px;
+            margin: 90px auto;
+        }
+
+        .section01 .item_wrap {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .section01 .item_wrap .item {
+            width: 276px;
+        }
+
+        .section01 .item_wrap .item img {
+            width: 100%;
+            height: 276px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .section01 .item_wrap .item p {
+            font-size: 16px;
+            margin-top: 12px;
+            font-family: 'Noto Sans KR';
+        }
+
+        .section02 {
+            width: 1200px;
+            margin: 0 auto;
+            margin-top: 40px;
+        }
+
+        .section02 h1 {
+            font-size: 30px;
+            margin-bottom: 35px;
+            font-family: 'Noto Sans KR';
+            font-weight: bold;
+        }
+
+        .section02 .list {
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .section02 .list .image {
+            width: 588px;
+            height: 588px;
+        }
+
+        .section02 .list .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .section02 .list .item_wrap {
+            width: 588px;
+            height: 588px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .section02 .list .item_wrap .item {
+            width: 282px;
+        }
+
+        .section02 .list .item_wrap .item img {
+            width: 100%;
+            height: 282px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .section02 .list .item_wrap .item .text p {
+            margin-top: 12px;
+            font-size: 18px;
+            line-height: 1.3;
+            font-family: 'Noto Sans KR';
+            font-weight: 500;
+        }
+
+        .section02 .list .item_wrap .item .text div {
+            margin-top: 10px;
+            font-family: 'Noto Sans KR';
+        }
+
+        .section02 .list .item_wrap .item .text div b {
+            font-size: 20px;
+            color: #f4614c;
+            font-family: 'Noto Sans KR';
+
+        }
+
+        .section02 .list .item_wrap .item .text div strong {
+            font-size: 20px;
+            color: #037158;
+        }
+
+        .section02 .list .item_wrap .item .text div span {
+            font-size: 15px;
+            color: #999;
+            text-decoration: line-through;
+            /* 취소선 */
+        }
+
+        .section03 {
+            width: 1200px;
+            margin: 90px auto 120px;
+        }
+
+        .section03 h1 {
+            margin-bottom: 35px;
+            font-size: 30px;
+            font-family: 'Noto Sans KR';
+            font-weight: bolder;
+        }
+
+        .section03 .list {
+            display: flex;
+            gap: 10px;
+            list-style: none;
+            font-family: 'Noto Sans KR';
+            font-weight: 500;
+        }
+
+        .section03 .list li {
+            width: 98px;
+            height: 37px;
+            text-align: center;
+            line-height: 37px;
+            border-radius: 50px;
+            box-sizing: border-box;
+        }
+
+        .section03 .list li:nth-child(1) {
+            background-color: #037158;
+            color: white;
+        }
+
+        .section03 .list li:nth-child(2) {
+            border: 1px solid black;
+            color: black;
+        }
+
+        .section03 .item_wrap {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            margin-top: 70px;
+        }
+
+        .section03 .item_wrap .item {
+            width: 380px;
+        }
+
+        .section03 .item_wrap .item img {
+            width: 100%;
+            height: 420px;
+            border-radius: 12px;
+        }
+
+        .section03 .item_wrap .item p {
+            margin-top: 20px;
+            font-size: 18px;
+            font-family: 'Noto Sans KR';
+            font-weight: 500;
+        }
+
+        .section03 .item_wrap:nth-child(3) {
+            border-bottom: 1px solid #999;
+            padding-bottom: 55px;
+        }
+
+        .section03 .plus {
+            width: 352px;
+            height: 60px;
+            border: 1px solid black;
+            margin: 80px auto 0;
+            border-radius: 5px;
+
+            font-size: 20px;
+            font-family: 'Noto Sans KR';
+            font-weight: 500;
+            text-align: center;
+            line-height: 60px;
+        }
+
+        .section03 .plus a {
+            color: black;
+            text-decoration: none;
+            display: block;
+        }
+
+        .section03 .plus:hover {
+            background-color: #037158;
+            border: 0px;
+        }
+
+        .section03 .plus:hover a {
+            color: white;
+        }
+
+        .section04 {
+            width: 1200px;
+            margin: 120px auto;
+        }
+
+        .section04 h1 {
+            text-align: center;
+            font-size: 30px;
+            font-family: 'Noto Sans KR';
+            font-weight: bold;
+            margin-bottom: 60px;
+        }
+
+        .section04 .item_wrap {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+            justify-content: space-between;
+            gap: 70px 0;
+        }
+
+        .section04 .item_wrap .item {
+            width: 210px;
+        }
+
+        .section04 .item_wrap .item img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+        }
+
+        .section04 .item_wrap .item .text {
+            background-color: white;
+            padding: 13px 11px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .section04 .item_wrap .item .text img {
+            width: 72px;
+            height: 72px;
+        }
+
+        .section04 .item_wrap .item .text .sub_text h2 {
+            font-size: 12px;
+            font-family: 'Noto Sans KR';
+            font-weight: bold;
+        }
+
+        .section04 .item_wrap .item .text .sub_text p {
+            font-size: 12px;
+            font-family: 'Noto Sans KR';
+            font-weight: 500;
+            margin: 10px 0 10px;
+        }
+
+        .section04 .item_wrap .item .text .sub_text span {
+            font-size: 12px;
+            font-family: 'Noto Sans KR';
+            font-weight: 500;
+            color: #999;
+        }
+
+        .section04 .button {
+            width: 352px;
+            height: 60px;
+            border: 1px solid black;
+            margin: 80px auto 0;
+            border-radius: 5px;
+
+            font-size: 20px;
+            font-family: 'Noto Sans KR';
+            font-weight: 500;
+            text-align: center;
+            line-height: 60px;
+        }
+
+        .section04 .button a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .section04 .button:hover {
+            background-color: #037158;
+            border: 0;
+        }
+
+        .section04 .button:hover a {
+            color: white;
+        }
+
+        .footer{
+            width: 100%;
+            background-color: #037158;
+            margin: 0 auto;
+        }
+        .footer .text{
+            width: 1200px;
+            margin: 75px auto;
+            display: flex;
+            justify-content: space-between;
+            padding: 50px 0 50px;
+            color: white;
+            line-height: normal;
+        }
+        .footer .text .main{
+            
+        }
+        .footer .text .main h1{
+            font-size: 20px;
+            font-family: 'Noto Sans KR';
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .footer .text .main .list{
+            font-size: 15px;
+        }
+        .footer .text .main p{}
+        .footer .text .main span{}
+        .footer .text .sub{}
+        .footer .text .sub h2{}
+        .footer .text .sub p{}
+        .footer .text .sub span{}
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+
+        <div class="section01">
+            <div class="item_wrap">
+                <div class="item">
+                    <img src="img/안국건강/지아잔틴 미니.jpg" alt="아이원 루테인 지아잔틴 미니 180캡슐">
+                    <p>아이원 루테인 지아잔틴 미니 180캡슐</p>
+                </div><!-- item end -->
+
+                <div class="item">
+                    <img src="img/안국건강/지아잔틴_플러스.jpg" alt="아이원 루테인 지아잔틴 미니 180캡슐">
+                    <p>아이원 루테인 지아잔틴 미니 180캡슐</p>
+                </div><!-- item end -->
+
+                <div class="item">
+                    <img src="img/안국건강/아스타잔틴 미니.jpg" alt="아이원 루테인 지아잔틴 미니 180캡슐">
+                    <p>아이원 루테인 지아잔틴 미니 180캡슐</p>
+                </div><!-- item end -->
+
+                <div class="item">
+                    <img src="img/안국건강/초임계.jpg" alt="아이원 루테인 지아잔틴 미니 180캡슐">
+                    <p>아이원 루테인 지아잔틴 미니 180캡슐</p>
+                </div><!-- item end -->
+
+            </div><!-- item_wrap end -->
+        </div><!-- section01 end -->
+
+        <div class="section02">
+            <h1>함께 살수록 좋은 3+ ❤</h1>
+
+            <div class="list">
+                <div class="image">
+                    <img src="img/안국건강/이모지.jpg" alt="이모지">
+                </div>
+
+                <div class="item_wrap">
+
+                    <div class="item">
+                        <img src="img/안국건강/안심케어 마그네슘.jpg" alt="마그네슘">
+                        <div class="text">
+                            <p>[3+1] 안심 마그네슘 90정 4박스<br>(4개월분)</p>
+                            <div>
+                                <b>27%</b>
+                                <strong>87,200</strong>
+                                <span>120,000</span>
+                            </div>
+                        </div><!-- text end -->
+                    </div><!-- item end-->
+
+                    <div class="item">
+                        <img src="img/안국건강/혈당케어 바나바.jpg" alt="혈당케어">
+                        <div class="text">
+                            <p>[3+1] 혈당케어 바나바 60정 4박스<br>(8개월분)</p>
+                            <div>
+                                <b>63%</b>
+                                <strong>58,800</strong>
+                                <span>160,000</span>
+                            </div>
+                        </div><!-- text end -->
+                    </div><!-- item end-->
+
+                </div><!-- item_wrap end -->
+            </div><!-- list end -->
+
+        </div><!-- section02 end -->
+
+        <div class="section03">
+            <h1>AG 건강 & 라이프 </h1>
+
+            <div class="list">
+                <li>AG 노트</li>
+                <li>AG 매거진</li>
+            </div><!-- list end -->
+
+            <div class="item_wrap">
+
+                <div class="item">
+                    <img src="img/안국건강/건강노트_1.jpg" alt="건강노트_1">
+                    <p>멀티비타민으로 비타민 A,B,C,D,E를 모두...</p>
+                </div><!-- item end -->
+
+                <div class="item">
+                    <img src="img/안국건강/건강노트_2.jpg" alt="건강노트_2">
+                    <p>두통 유발하는 안구건조증 치료법, 원인은?</p>
+                </div><!-- item end -->
+
+                <div class="item">
+                    <img src="img/안국건강/건강노트_3.jpg" alt="건강노트_3">
+                    <p>건강한 다이어트의 핵심, 호르몬을 건강하게! ...</p>
+                </div><!-- item end -->
+
+            </div><!-- item_wrap end -->
+
+            <div class="item_wrap">
+
+                <div class="item">
+                    <img src="img/안국건강/건강노트_4.jpg" alt="건강노트_4">
+                    <p>연골 구성성분, 프로테오글리칸과 함께 섭취하면...</p>
+                </div><!-- item end -->
+
+                <div class="item">
+                    <img src="img/안국건강/건강노트_5.jpg" alt="건강노트_5">
+                    <p>건강한 다이어트의 핵심, 호르몬을 건강하게! ...</p>
+                </div><!-- item end -->
+
+                <div class="item">
+                    <img src="img/안국건강/건강노트_6.jpg" alt="건강노트_6">
+                    <p>감기예방법, 감기에 좋은 성분과 영양제</p>
+                </div><!-- item end -->
+
+            </div><!-- item_wrap end -->
+
+            <div class="plus">
+                <a href="#">AG 건강노트 더보기+</a>
+            </div><!-- plus end -->
+        </div><!-- section03 end -->
+
+        <div class="section04">
+            <h1>고객 추천 리뷰</h1>
+            <div class="item_wrap">
+
+                <div class="item">
+                    <img src="img/안국건강/리뷰1.jpg" alt="review1">
+                    <div class="text">
+                        <img src="img/안국건강/제품1.jpg" alt="1">
+                        <div class="sub_text">
+                            <h2> [안국건강] 그린...</h2>
+                            <p>아이의 면역성을 위해<br> 프로폴리스를 쉽게</p>
+                            <span>리뷰 4,573</span>
+                            <span>평점 4.9</span>
+                        </div><!-- subtext end -->
+                    </div><!-- text end -->
+                </div><!-- item end -->
+
+                <div class="item">
+                    <img src="img/안국건강/리뷰2.jpg" alt="review2">
+                    <div class="text">
+                        <img src="img/안국건강/제품2.jpg" alt="2">
+                        <div class="sub_text">
+                            <h2> [안국건강] 그린...</h2>
+                            <p>아이의 면역성을 위해<br> 프로폴리스를 쉽게</p>
+                            <span>리뷰 4,573</span>
+                            <span>평점 4.9</span>
+                        </div><!-- subtext end -->
+                    </div><!-- text end -->
+                </div><!-- item end -->
+
+                <div class="item">
+                    <img src="img/안국건강/리뷰3.jpg" alt="review3">
+                    <div class="text">
+                        <img src="img/안국건강/제품3.jpg" alt="3">
+                        <div class="sub_text">
+                            <h2> [안국건강] 그린...</h2>
+                            <p>아이의 면역성을 위해<br> 프로폴리스를 쉽게</p>
+                            <span>리뷰 4,573</span>
+                            <span>평점 4.9</span>
+                        </div><!-- subtext end -->
+                    </div><!-- text end -->
+                </div><!-- item end -->
+
+                <div class="item">
+                    <img src="img/안국건강/리뷰4.jpg" alt="review4">
+                    <div class="text">
+                        <img src="img/안국건강/제품4.jpg" alt="4">
+                        <div class="sub_text">
+                            <h2> [안국건강] 그린...</h2>
+                            <p>아이의 면역성을 위해<br> 프로폴리스를 쉽게</p>
+                            <span>리뷰 4,573</span>
+                            <span>평점 4.9</span>
+                        </div><!-- subtext end -->
+                    </div><!-- text end -->
+                </div><!-- item end -->
+
+                <div class="item">
+                    <img src="img/안국건강/리뷰5.jpg" alt="review5">
+                    <div class="text">
+                        <img src="img/안국건강/제품5.jpg" alt="5">
+                        <div class="sub_text">
+                            <h2> [안국건강] 그린...</h2>
+                            <p>아이의 면역성을 위해<br> 프로폴리스를 쉽게</p>
+                            <span>리뷰 4,573</span>
+                            <span>평점 4.9</span>
+                        </div><!-- subtext end -->
+                    </div><!-- text end -->
+                </div><!-- item end -->
+
+                <div class="item">
+                    <img src="img/안국건강/리뷰6.jpg" alt="review6">
+                    <div class="text">
+                        <img src="img/안국건강/제품6.jpg" alt="6">
+                        <div class="sub_text">
+                            <h2> [안국건강] 그린...</h2>
+                            <p>아이의 면역성을 위해<br> 프로폴리스를 쉽게</p>
+                            <span>리뷰 4,573</span>
+                            <span>평점 4.9</span>
+                        </div><!-- subtext end -->
+                    </div><!-- text end -->
+                </div><!-- item end -->
+
+                <div class="item">
+                    <img src="img/안국건강/리뷰7.jpg" alt="review7">
+                    <div class="text">
+                        <img src="img/안국건강/제품7 (2).jpg" alt="7">
+                        <div class="sub_text">
+                            <h2> [안국건강] 그린...</h2>
+                            <p>아이의 면역성을 위해<br> 프로폴리스를 쉽게</p>
+                            <span>리뷰 4,573</span>
+                            <span>평점 4.9</span>
+                        </div><!-- subtext end -->
+                    </div><!-- text end -->
+                </div><!-- item end -->
+
+                <div class="item">
+                    <img src="img/안국건강/리뷰8.jpg" alt="review8">
+                    <div class="text">
+                        <img src="img/안국건강/제품8.jpg" alt="8">
+                        <div class="sub_text">
+                            <h2> [안국건강] 그린...</h2>
+                            <p>아이의 면역성을 위해<br> 프로폴리스를 쉽게</p>
+                            <span>리뷰 4,573</span>
+                            <span>평점 4.9</span>
+                        </div><!-- subtext end -->
+                    </div><!-- text end -->
+                </div><!-- item end -->
+
+                <div class="item">
+                    <img src="img/안국건강/리뷰9.jpg" alt="review9">
+                    <div class="text">
+                        <img src="img/안국건강/제품9.jpg" alt="9">
+                        <div class="sub_text">
+                            <h2> [안국건강] 그린...</h2>
+                            <p>아이의 면역성을 위해<br> 프로폴리스를 쉽게</p>
+                            <span>리뷰 4,573</span>
+                            <span>평점 4.9</span>
+                        </div><!-- subtext end -->
+                    </div><!-- text end -->
+                </div><!-- item end -->
+
+                <div class="item">
+                    <img src="img/안국건강/리뷰10.jpg" alt="review10">
+                    <div class="text">
+                        <img src="img/안국건강/제품10.jpg" alt="10">
+                        <div class="sub_text">
+                            <h2> [안국건강] 그린...</h2>
+                            <p>아이의 면역성을 위해<br> 프로폴리스를 쉽게</p>
+                            <span>리뷰 4,573</span>
+                            <span>평점 4.9</span>
+                        </div><!-- subtext end -->
+                    </div><!-- text end -->
+                </div><!-- item end -->
+
+            </div><!-- item_wrap end -->
+
+            <div class="button">
+                <a href="#">리뷰 더보기+</a>
+            </div><!-- button end -->
+
+        </div><!-- section04 end -->
+
+        <div class="footer">
+            <div class="text">
+                <div class="main">
+                    <h1>안국건강주식회사 카피몰</h1>
+                    <ul class="list">
+                        <li>회사소개</li>
+                        <li>네이버스토어</li>
+                        <li>회원혜택</li>
+                        <li>영문몰(Eng)</li>
+                    </ul>
+                    <p> 대표이사 어광 | 서울특별시 강남구 영동대로 511(트레이드타워) 11층(1101호) | 사업자등록번호 124-86-00538 <br>
+                        통신판매업 2019-서울강남-05398 | 사업자정보확인 | 물류 : 18608 경기도 화성시 향남읍 발안공단로1길 15 제일테크닉스 1층 <br>
+                        Copyright 2002 © 안국건강주식회사 All rights reserved.</p>
+
+                    <span>이용약관 | 개인정보처리방침 | 이용안내 | 광고·제휴문의 | 단체선물문의 | 판매채널문의 | 입주사등록</span>
+                </div><!-- main end -->
+                <div class="sub">
+                    <h2>고객센터</h2>
+                    <p>1899-5707</p>
+                    <span>평일 08:30~17:30</span>
+                    <span>점심 12:30~13:30 (수요일 12:30~14:00)</span> 
+                    <span>주말, 공휴일 휴무</span> 
+                </div><!-- sub end -->
+
+            </div><!-- text end -->
+        </div><!-- footer end -->
+
+    </div><!-- wrap end -->
+</body>
+
+</html>

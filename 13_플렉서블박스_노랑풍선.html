@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yellow balloon</title>
+    <style>
+        @font-face {
+            font-family: 'Pretendard';
+            font-weight: 400;
+            font-display: swap;
+            src: local('Pretendard Regular'), url(./woff2/Pretendard-Regular.woff2) format('woff2'), url(./woff/Pretendard-Regular.woff) format('woff');
+        }
+
+        @font-face {
+            font-family: 'Pretendard';
+            font-weight: 800;
+            font-display: swap;
+            src: local('Pretendard ExtraBold'), url(./woff2/Pretendard-ExtraBold.woff2) format('woff2'), url(./woff/Pretendard-ExtraBold.woff) format('woff');
+        }
+
+        @font-face {
+            font-family: 'Pretendard';
+            font-weight: 500;
+            font-display: swap;
+            src: local('Pretendard Medium'), url(./woff2/Pretendard-Medium.woff2) format('woff2'), url(./woff/Pretendard-Medium.woff) format('woff');
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 402px
+        }
+
+
+        .logo {
+            margin: 60px 135px 40px;
+            width: 132px;
+            height: 35px;
+        }
+
+        .contents .first-line {
+            display: flex;
+            justify-content: space-evenly;
+            font-size: 13px;
+            font-family: 'Pretendard';
+            font-weight: 500;
+        }
+
+        .contents .second-line {
+            display: flex;
+            justify-content: space-evenly;
+            margin: 12px 0 30px 0;
+            font-size: 13px;
+            font-family: 'Pretendard';
+            font-weight: 500;
+        }
+
+        .contents .first-line li {
+            list-style: none;
+            width: 110px;
+            height: 48px;
+            background-color: #eeeeee;
+            border-radius: 50px;
+            line-height: 48px;
+            text-align: center;
+        }
+
+        .contents .second-line li {
+            list-style: none;
+            width: 110px;
+            height: 48px;
+            background-color: #eeeeee;
+            border-radius: 50px;
+            line-height: 48px;
+            text-align: center;
+        }
+
+        .contents .second-line li:nth-child(2) {
+            background-color: #ffcb31;
+            border: 1px solid black;
+        }
+
+        .korea_travle {
+            width: 402px;
+            height: 534px;
+            padding: 30px 16px 30px 16px;
+            box-sizing: border-box;
+            border: 1px solid #cccccc;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+        }
+
+        .main-text {
+            font-size: 24px;
+            font-family: 'Pretendard';
+            font-weight: 800;
+        }
+
+        .box1 {
+            width: 370px;
+            height: 208px;
+            border: 1px solid #888888;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .box1 img {
+            width: 177px;
+        }
+
+        .box1 .text1 {
+            width: 177px;
+            padding: 10px 16px 10px 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+        }
+
+        .box1 .text1 p {
+            font-size: 15px;
+            font-family: 'Pretendard';
+            font-weight: 400;
+        }
+
+        .box1 .text1 strong {
+            font-size: 16px;
+            color: #ff0909;
+            font-family: 'Pretendard';
+            font-weight: 800;
+            text-align: right;
+            width: 100%;
+        }
+
+        .box2 {
+            width: 370px;
+            height: 208px;
+            border: 1px solid #888888;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .box2 img {
+            width: 177px;
+        }
+
+        .box2 .text2 {
+            width: 177px;
+            padding: 10px 16px 10px 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+        }
+
+        .box2 .text2 p {
+            font-size: 15px;
+            font-family: 'Pretendard';
+            font-weight: 400;
+        }
+
+        .box2 .text2 strong {
+            font-size: 16px;
+            color: #ff0909;
+            font-family: 'Pretendard';
+            font-weight: 800;
+            text-align: right;
+            width: 100%;
+        }
+
+        .review {
+            height: 404px;
+            background-color: black;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-around;
+            padding: 30px 16px 30px;
+        }
+
+        .review .re-h1 {
+            color: white;
+            font-size: 24px;
+            font-family: 'Pretendard';
+            font-weight: 800;
+        }
+
+        .box3 {
+            width: 370px;
+            background-color: white;
+            padding: 22px 20px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        .box3 .re1 {
+            width: 80px;
+            height: 80px;
+        }
+
+        .box3 .text3 {
+            width: 235px;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-around;
+        }
+
+        .box3 .text3 span {
+            font-size: 13px;
+            font-family: 'Pretendard';
+            font-weight: 400;
+            width: 100%;
+        }
+
+        .box3 .text3 h2 {
+            font-size: 15px;
+            font-family: 'Pretendard';
+            font-weight: 800;
+            margin-top: 10px;
+        }
+
+        .box3 .text3 .text3-p {
+            font-size: 14px;
+            font-family: 'Pretendard';
+            font-weight: 400;
+            margin-top: 10px;
+        }
+
+        .box4 {
+            width: 370px;
+            background-color: white;
+            padding: 22px 20px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .box4 .re2 {
+            width: 88px;
+            height: 88px;
+        }
+
+        .box4 .text4 {
+            width: 235px;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-around;
+        }
+
+        .box4 .text4 span {
+            font-size: 13px;
+            font-family: 'Pretendard';
+            font-weight: 400;
+            width: 100%;
+        }
+
+        .box4 .text4 h2 {
+            font-size: 15px;
+            font-family: 'Pretendard';
+            font-weight: 800;
+            margin-top: 10px;
+        }
+
+        .box4 .text4 .text4-p {
+            font-size: 14px;
+            font-family: 'Pretendard';
+            font-weight: 400;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <img class="logo" src="img/노랑풍선/logo.png" alt="logo">
+    <div class="contents">
+        <ul class="first-line">
+            <li>해외패키지</li>
+            <li>에어텔</li>
+            <li>허니문</li>
+        </ul>
+        <ul class="second-line">
+            <li>프리미엄</li>
+            <li>국내여행</li>
+            <li>항공</li>
+        </ul>
+    </div><!-- contents end -->
+    <div class="korea_travle">
+        <h1 class="main-text">내맘대로 골라가는 국내여행</h1>
+
+        <div class="box1">
+            <img src="img/노랑풍선/korea1.jpg" alt="korea1">
+            <div class="text1">
+                <P>#울릉도3일 #포항크루즈 <br>
+                    #케랜시아리조트 #육로AB <br>
+                    #코스포함 #겨울한정 </P>
+                <strong>320,000원~</strong>
+            </div><!-- text1_end -->
+        </div><!-- box1_end -->
+
+        <div class="box2">
+            <img src="img/노랑풍선/korea2.jpg" alt="korea2">
+            <div class="text2">
+                <P>백령도 2일 #3식제공<br>
+                    #서해의비경 #모텔급 </P>
+                <strong>181,000원~</strong>
+            </div><!-- text2_end -->
+        </div><!-- box2_end -->
+    </div><!-- korea_travle end -->
+
+    <div class="review">
+        <h1 class="re-h1">노랑풍선 고객 여행기</h1>
+        <div class="box3">
+            <img class="re1" src="img/노랑풍선/yellow.jpg" alt="re1">
+            <div class="text3">
+                <span>한국,내륙</span>
+                <h2>노란색 아기 산수유가 예뻤던 구례 <br>
+                    당일치기 기차여행</h2>
+                <p class="text3-p">남쪽나라 꽃여행 시즌이 돌아온 것 같아서,<br>
+                    오랜만에 가족들과 함께 구례 당일치기<br>
+                    여행을 계획했습니다. 꽃축제들이 많이 열...</p>
+            </div><!-- text3 end -->
+        </div><!-- box3 end -->
+
+        <div class="box4">
+            <img class="re2" src="img/노랑풍선/yellow2.jpg" alt="re2">
+            <div class="text4">
+                <span>한국,내륙</span>
+                <h2>단풍여행 막차 탄 영주 당일여행</h2>
+                <p class="text4-p">11월 첫 주 주말, 단풍 구경 막차 느낌으로,<br>
+                    드디어 영주 여행 다녀왔습니다. 이른 새벽<br>
+                    부터 시작된 일정이었고, 서울...</p>
+            </div><!-- text4 end -->
+        </div><!-- box4 end -->
+    </div><!-- review end -->
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경이미지</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .bg01{
+            height: 500px;
+            background-color: yellowgreen;
+            background-image: url('img/침구.jpg');
+            /* 텍스트를 이미지위에 배치 */
+            background-repeat: no-repeat;
+            /* repeat-x
+            repeat-y                                  
+            no-repeat*/
+            background-position: left top;
+            /* top, botttom left, right, center 
+            숫자*/
+              background-size: cover;
+              /* contain / cover */
+        }
+        .bg02{
+            height: 300px;
+            margin: 50px 0;
+            background: url('img/독서등.jpg') no-repeat center / 500px pink fixed;
+            /* 배경 : 경로 반복 위치 / 사이즈 컬러 고정여부(순서대로 기입) */
+            /* 한줄로 쓸경우에는 background코드만 사용가능 */
+            background-attachment: fixed;/* 베경이미지 고정 */
+        }
+        .bg03{
+            height: 300px;
+            /* 그라디언트 io */
+            background: rgb(34,193,195);
+            background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="bg01">
+        <h1>배경이미지 1</h1>
+    </div><!-- bg01 end -->
+    <div class="bg02">
+        <h1>배경이미지 2</h1>
+    </div><!-- bg02 end -->
+    <div class="bg03">
+        <h1>배경이미지 3</h1>
+    </div><!-- bg03 end -->
+</body>
+</html>
