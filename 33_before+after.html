@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>before+after</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        body{
+            text-align: center;
+        }
+        div{
+            margin: 50px;
+            font-size: 50px;
+            text-align: center;
+        }
+        .text01::before{
+            content: '🐶';
+        }
+        .text01::after{
+            content: '🐱';
+        }
+        .text02{
+            position: relative;
+            display: inline-block;
+            
+        }
+        .text02::before{
+        content:'';/* content 코드는 필수 아무것도 안쓰더라도 넣을것 */
+        width: 100%;
+        height: 20px;
+        background-color: rgb(127, 255, 212);
+        display: block;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50% , 0);
+        z-index: -1;
+        padding: 0.5px;
+        }
+        
+        .text03{
+            position: relative;
+        }
+
+        .text03::after{
+            content: '';
+            width: 50px;
+            height: 50px;
+            background-color: aquamarine;
+            border-radius: 50px;
+            position: absolute;
+            top: -50px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            display: none;
+        }
+        .text03:hover::after{
+            display: block;
+        }
+
+        .img_box{
+            width: 400px;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .img_box::before{
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            transform: translateY(100%);
+            transition: 0.7s;
+        }
+
+        .img_box img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .img_box a{
+            width: 200px;
+            height: 40px;
+            border: 1px solid black;
+            background-color: white;
+            font-size: 20px;
+            display: block;
+            text-align: center;
+            line-height: 40px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* transition은 display: none;이랑 중복사용이 안됨*/
+            opacity: 0;
+            transition: 0.7s;
+        }
+        .img_box:hover a{
+            opacity: 1;;
+        }
+
+        .img_box:hover::before{
+            content: '';
+            transform: translateY(0);
+            
+        }
+
+        .button{
+            width: 200px;
+            height: 40px;
+            border: 1px  solid black;
+            display: block;
+            line-height: 40px;
+            position: relative;
+            margin: 50px auto;
+            overflow: hidden;
+        }
+
+        .button::before{
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: cadetblue;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transform: translateX(-100%);
+            transition: 0.7s;
+        }
+        .button:hover::before{
+            transform: translateX(0);
+        }
+        .button:hover {
+            color: #fff;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- 가상요소선택자  -->
+     <div class="text01">가상요소선택자</div>
+     <div class="text02">가상요소선택자</div>
+     <div class="text03">가상요소선택자</div>
+    
+    <div class="img_box">
+        <img src="img/baton_hazel_slonwood_93e330ab-4a38-4a14-9230-63d477890949.jpg" alt="">
+        <a href="#">바로가기</a>
+    </div>
+
+    <a href="#" class="button">바로가기</a>
+</body>
+</html>

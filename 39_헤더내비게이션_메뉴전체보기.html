@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>헤더내비게이션_메뉴전체보기</title>
+    <link rel="stylesheet" href="css/39.css">
+    <script>
+        window.onload = () => {
+            /* menu_btn을 클릭했을때 실행 */
+            /* .nav에게 클래스명 .active 추가/삭제 */
+
+            /* var, let, const = 자바스크립트 이름설정 코드 */
+            let menuBtn = document.querySelector('.menu_btn');/* menu_btn 자바스크립트 이름 설정 */
+            let allManu = document.querySelector('.nav');
+
+            menuBtn.addEventListener('click',() => {
+                allManu.classList.toggle('active')
+            });
+            /* menuBtn(.menu_btn)을 클릭했을때(.addEventLestener('click')) allManu(.nav)에 클래스를 추가/삭제한다 
+            (classList.toggle(클래스 추가/삭제)('active'라는 클래스명)) */
+            
+            /* classlist.add 클래스 추가
+            classlist.remove 클래스 삭제
+            classlist.toggle 클래스 추가/삭제 */
+
+        };/* script end */
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="inner">
+            <h1 class="logo">
+                <a href="#">
+                    <img src="img/logo/버거킹로고.png" alt="버거킹">
+                </a>
+            </h1><!-- logo end -->
+
+            <button class="menu_btn">
+                <img src="img/icon/햄버거_베이직.png" alt="햄버거베이직">
+            </button><!-- menu_btn end -->
+            <!-- link가 필요하면 a태그 필요없으면 button태그 -->
+
+            <nav class="nav">
+                <ul class="gnb">
+                    <li>
+                        <a href="#" class="depth_01">menu1</a>
+                        <ul class="depth_02">
+                            <li><a href="#">첫번째 메뉴1</a></li>
+                            <li><a href="#">첫번째 메뉴2</a></li>
+                            <li><a href="#">첫번째 메뉴3</a></li>
+                            <li><a href="#">첫번째 메뉴4</a></li>
+                            <li><a href="#">첫번째 메뉴5</a></li>
+                        </ul><!-- depth_02 end -->
+                    </li>
+
+                    <li>
+                        <a href="#" class="depth_01">menu2</a>
+                        <ul class="depth_02">
+                            <li><a href="#">두번째 메뉴1</a></li>
+                            <li><a href="#">두번째 메뉴2</a></li>
+                            <li><a href="#">두번째 메뉴3</a></li>
+                            <li><a href="#">두번째 메뉴4</a></li>
+                            <li><a href="#">두번째 메뉴5</a></li>
+                        </ul><!-- depth_02 end -->
+                    </li>
+
+                    <li>
+                        <a href="#" class="depth_01">menu3</a>
+                        <ul class="depth_02">
+                            <li><a href="#">세번째 메뉴1</a></li>
+                            <li><a href="#">세번째 메뉴2</a></li>
+                            <li><a href="#">세번째 메뉴3</a></li>
+                            <li><a href="#">세번째 메뉴4</a></li>
+                            <li><a href="#">세번째 메뉴5</a></li>
+                        </ul><!-- depth_02 end -->
+                    </li>
+
+                    <li>
+                        <a href="#" class="depth_01">menu4</a>
+                        <ul class="depth_02">
+                            <li><a href="#">네번째 메뉴1</a></li>
+                            <li><a href="#">네번째 메뉴2</a></li>
+                            <li><a href="#">네번째 메뉴3</a></li>
+                            <li><a href="#">네번째 메뉴4</a></li>
+                            <li><a href="#">네번째 메뉴5</a></li>
+                        </ul><!-- depth_02 end -->
+                    </li>
+
+                </ul><!-- gnb end -->
+            </nav>
+        </div>
+    </header>
+</body>
+
+</html>

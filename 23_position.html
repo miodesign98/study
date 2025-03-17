@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 3000px;
+        }
+
+        .position {
+            width: 400px;
+            height: 400px;
+            background-color: aqua;
+            margin: 100px auto;
+            position: relative;
+            /* top: 200px; */
+        }
+
+        .position div {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+
+        .position div:nth-child(1) {
+            background-color: red;
+            top: 0px;
+            left: 300px;
+        }
+
+        .position div:nth-child(2) {
+            background-color: pink;
+            bottom: 0;
+            left: 300px;
+        }
+
+        .position div:nth-child(3) {
+            background-color: orange;
+            bottom: 0;
+            left: -100px;
+        }
+
+        .position div:nth-child(4) {
+            background-color: yellow;
+            top: -100px;
+        }
+
+        .position div:nth-child(5) {
+            background-color: greenyellow;
+            right: 50px;
+            top: 50px;
+            position: static;
+            /* 포지션 해제 */
+        }
+
+        .position div:nth-child(6) {
+            background-color: skyblue;
+            position: fixed;
+            /* 브라우저 공간 안에서 위치고정 */
+            right: 100px;
+            top: 100px;
+        }
+
+        .position div:nth-child(7) {
+            background-color: purple;
+            position: sticky;
+            /* 부모가 가지고있는 공간안에서 브라우저화면과 만났을때 위치 고정 */
+            top: 100px;
+        }
+
+        .main_visual {
+            height: 500px;
+            position: relative;
+        }
+
+        .main_visual img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .main_visual .text {
+            width: 1280px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .section02 {
+            height: 500px;
+            margin: 40px 0;
+            position: relative;
+        }
+
+        .section02 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .section02 .text{
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(0, -50%);
+            text-align: center;
+            background-color: aquamarine;
+        }
+        .section02 .text p {
+            font-size: 30px;
+        }
+
+        .section03{
+            width: 1280px;
+            margin: 100px auto;
+            background-color: bisque;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .section03 .text {
+            width: 600px;
+            background-color: brown;
+            position: sticky;
+            top: 100px;
+        }
+
+        .section03 .item_wrap{
+            width: 600px;
+            background-color: burlywood;
+        }
+
+        .section03 .item_wrap .item{
+            height: 600px;
+            margin: 20px;
+            border: 1px solid #333;
+            background-color: bisque;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="position">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+    </div><!-- position end -->
+
+    <p class="text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+        Rem, ex nostrum quia veritatis velit blanditiis ipsa,<br>
+        obcaecati quam accusamus consectetur nisi ad culpa provident <br>
+        architecto labore placeat? Eos, quia ipsa.
+    </p>
+
+    <section class="main_visual">
+        <img src="img/parfeuille_greentea_sl_7688863c-0a89-4a47-b364-8c48f76bf428.jpg" alt="">
+        <div class="text">
+            <h1>main visual</h1>
+            <a href="#">view more</a>
+        </div>
+    </section><!-- main_visual end -->
+
+    <section class="section02">
+        <img src="img/CacaoMacaron-Creative1.jpg" alt="">
+        <div class="text">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Tempora commodi suscipit tenetur nesciunt.
+            </p>
+            <a href="#">view more</a>
+        </div><!-- text end -->
+    </section><!-- section02 end -->
+
+    <section class="section03">
+        <div class="text">
+            <h2>section title</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                 Maiores laudantium inventore beatae. Maxime, corporis aspernatur. 
+                 Corrupti, earum in nobis neque, dolorum reprehenderit nam, 
+                 ex at corporis necessitatibus explicabo laborum. Temporibus.</p>
+        </div><!-- text end -->
+        <div class="item_wrap">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+        </div><!-- itwm wrap -->
+    </section><!-- section03 end -->
+</body>
+
+</html>
