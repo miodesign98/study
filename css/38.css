@@ -1,0 +1,142 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.header {
+    height: 100px;
+    position: relative;
+    z-index: 100;
+}
+.header .inner{
+    width: 1280px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .inner .logo{
+    height: 60px;
+
+}
+.header .inner .logo a{
+    height: 100%;
+    display: block;
+}
+.header .inner .logo a img{
+    height: 100%;
+}
+
+.header .inner .nav{}
+.header .inner .nav .gnb{
+    display: flex;
+    gap: 40px;
+}/* 여기에 hover을 적용시키면 전체메뉴가 나옴 */
+.header .inner .nav .gnb > li{
+    position: relative;
+}
+.header .inner .nav .gnb > li .depth_01{
+    line-height: 100px;
+    display: block;
+}
+.header .inner .nav .gnb > li .depth_02{
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+
+    background-color: white;
+    width: 180px;
+
+    white-space: nowrap;
+    /* display: none; */
+    opacity: 0;/* 눈에서만 안보이게 하지만 transition은 먹힘 */
+    transition: 0.5s;
+    visibility: hidden;/* opacity랑 같이 활용 / 아예 사라짐 / transition은 안먹힘*/
+    /* 따라서 opacity랑 visibility는 같이 쓰는게 좋음 */
+}
+.header .inner .nav .gnb > li .depth_02 li{}
+.header .inner .nav .gnb > li .depth_02 li a{
+    display: block;
+    padding: 8px 16px;
+}
+
+.header .inner .nav .gnb > li:hover .depth_02{
+    /* display: block; */
+    opacity: 1;
+    visibility: visible;
+}/* 이건 각 메뉴당 하나씩 나오게 하고싶을때 */
+
+/* main_visual */
+.main_visual{
+    height: 700px;
+    position: relative;
+}
+.main_visual video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.main_visual .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+}
+.main_visual .text h2{
+    text-align: center;
+    color: white;
+    font-size: 80px;
+}
+.main_visual .text .btn_wrap{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+.main_visual .text .btn_wrap a{
+    width: 200px;
+    height: 64px;
+    line-height: 64px;
+    background-color:black;
+    border-radius: 10px;
+    color: #fff;
+    margin-top: 24px;
+    position: relative;
+}
+.main_visual .text .btn_wrap .apple {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.main_visual .text .btn_wrap .apple img{
+    height: 30px;
+}
+
+.main_visual .text .btn_wrap .apple p{
+    font-size: 25px;
+    transform: translateY(3px);
+}
+.main_visual .text .btn_wrap a > .google{
+    width: 150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

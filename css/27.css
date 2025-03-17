@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.box div{
+    width: 280px;
+    height: 50px;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 50px;
+    margin: 30px;
+}
+
+.box div:first-child:hover{
+    background-color: pink;
+    transition: 0.7s;/* (속도 조절 코드) 0.7초의 속도동안 색이 채워짐 */
+}/* hover = 마우스를 올렸을때  */
+
+.box div:nth-child(2):hover{
+    background-color: tomato;
+    width: 400px;
+    transition: width 2s;/* 속도 앞에 적용시킬 코드를 적으면 그 코드에만 적용됨 */
+}
+
+.box div:nth-child(3):hover{
+    width: 600px;
+    background-color: violet;
+    transition: all 1s 2s;/* 적용시킬코드 실행시간 지연시간 */
+}/* 2초뒤에 1초만에 모든 코드가 적용됨 */
+
+.box div:nth-child(4):hover{
+    height: 200px;
+    background-color: blueviolet;
+    transition: height 3s ease-in-out ;
+    /* ease(기본값) 느리게 시작 빨라졌다가 다시 느려짐
+    linear 일정속도
+    ease-in 점점빨라짐
+    ease-out 점점느려짐
+    ease-in-out 처음과 끝이 느림
+    속도의 빠르가 조절*/
+}
+
+.box div:nth-child(5):hover{
+    width: 300px;
+    height: 300px;
+    background-color: blue;
+    transition: width 1s, height 1s 1s, background-color 1s 2s;
+}
+.img{
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    margin: 30px;
+}
+.img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.img:hover img{
+    transform: scale(1.3);
+}

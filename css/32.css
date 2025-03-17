@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.item_wrap .item{
+    width: 400px;
+    border: 1px solid black;
+    margin: 50px;
+}
+
+.item_wrap .item .image_box{
+    height: 400px;
+}
+
+.item_wrap .item .image_box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item_wrap .item:nth-child(1){
+    position: relative;
+    overflow: hidden;
+}
+.item_wrap .item:nth-child(1) .image_box{}
+.item_wrap .item:nth-child(1) .image_box img{}
+.item_wrap .item:nth-child(1) .text{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    transform: translateY(100%);
+    transition: 1s;
+}
+.item_wrap .item:nth-child(1) .text strong{
+    font-size: 20px;
+}
+.item_wrap .item:nth-child(1) .text p{}
+
+.item_wrap .item:nth-child(1):hover .text{
+    transform: translateY(0);
+}
+
+.item_wrap .item:nth-child(2){
+    position: relative;
+}
+.item_wrap .item:nth-child(2) .image_box{
+    overflow: hidden;
+}
+.item_wrap .item:nth-child(2) .image_box img{}
+.item_wrap .item:nth-child(2) .text{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;/* 1=100 */
+    transition: 1s;
+}
+.item_wrap .item:nth-child(2) .text strong{}
+.item_wrap .item:nth-child(2) .text p{}
+
+.item_wrap .item:nth-child(2):hover .text{
+    opacity: 100%;
+    transition: 1s;
+    /* transition을 같이 적용할 경우 꼭 opacity값을 적용한다 */
+}
+
+.item_wrap .item:nth-child(2):hover .image_box img{
+    transform: scale(1.5);
+    transition: 1s;
+}
+
+.item_wrap .item:nth-child(3){
+    position: relative;
+    overflow: hidden;
+}
+.item_wrap .item:nth-child(3) .image_box{
+    position: relative;
+    z-index: 1;
+    
+}
+.item_wrap .item:nth-child(3) .image_box img{
+}
+.item_wrap .item:nth-child(3) .text{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: green;
+    color: #fff;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+.item_wrap .item:nth-child(3) .text strong{}
+.item_wrap .item:nth-child(3) .text p{}
+
+.item_wrap .item:nth-child(3):hover .image_box{
+    transform: translateY(-45%);
+    transition: 1s;
+}

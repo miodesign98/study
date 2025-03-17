@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.text_slide{
+    padding: 30px 0;
+    font-size: 40px;
+
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+
+.text_slide p{
+    animation-name: textSlide;
+    animation-duration: 10s;
+
+    animation-iteration-count: infinite;/* 숫자지정 또는 infinite(무한반복)*/
+    animation-direction: alternate-reverse;
+    /* alternate 정방향-역방향
+    reverse 역방향
+    alternate-reverse 정방향-역방향?? */
+    animation-timing-function: linear;
+    /* 일정한 속도유지
+    ease 
+    ease-in
+    ease-out
+    ease-in-out
+    liner
+    */
+}
+
+@keyframes textSlide {
+    0%{
+        /* color: red; */
+        transform: translateX(0%);
+    }
+    50%{
+        /* color: blue; */
+    }
+    100%{
+        /* color: yellow; */
+        transform: translateX(-100%);
+    }
+}
+
+.ball{
+    width: 100px;
+    height: 100px;
+    background-color: palevioletred;
+    border-radius: 50%;
+    /* 애니메이션 : 이름 실행시간 횟수 방향 속도 */
+    animation: ball 1s infinite alternate linear;
+}
+
+@keyframes ball {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+        transform: translate(200px, -150px) rotate(120deg);
+    }
+    50% {
+        transform: translate(400px, -100px) rotate(240deg);
+    }
+    75% {
+        transform: translate(600px, -50px) rotate(360deg);
+    }
+    100% {
+        transform: translate(800px, 0) rotate(480deg);
+    }
+}

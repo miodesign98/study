@@ -1,0 +1,86 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+button{
+    background-color: transparent;/* 투명하게*/
+    border: 0;
+}
+
+/* header */
+.header{
+    height: 100px;
+    position: relative;
+}
+.header .inner{
+    width: 1280px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #999;
+}
+.header .inner .logo{
+    height: 60px;
+}
+.header .inner .logo a {
+    height: 100%;
+    display: block;
+}
+.header .inner .logo a img{
+    height: 100%;
+}
+
+.header .inner .menu_btn{
+    height: 100%;
+}
+.header .inner .menu_btn img{
+    height: 45px;
+}
+
+.header .inner .nav{
+    width: 100%;
+    position: fixed;
+    top: 120px;
+    left: 0;
+
+    opacity: 0;
+    transition: 1s;
+    visibility: hidden;
+}
+.header .inner .nav.active{
+    opacity: 1;
+    visibility: visible;
+}
+.header .inner .nav .gnb{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+.header .inner .nav .gnb li{}
+.header .inner .nav .gnb li > .depth_01{
+    font-size: 20px;
+    font-weight: bold;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.header .inner .nav .gnb li > .depth_02 li{
+    padding: 5px 10px;
+}
