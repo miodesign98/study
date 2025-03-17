@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자 찾기</title>
+    <script>
+        window.onload = () => {
+            //요소찾기(선택자 찾기)
+            let btn = document.getElementsByTagName('button')[0];
+            let text01 = document.getElementsByClassName('text')[0];
+            let text02 = document.getElementsByClassName('text-02')[0];
+            let text03 = document.getElementById('text-03');
+            //button을 클릭했을때 실행
+            //첫번째 div에게 글자색상 red로 변경
+            //첫번째 .text-02에게 배경색상 yellow로 변경
+            //#text-03에게 display:none으로 변경
+
+            btn.addEventListener('click', () => {
+                text01.style.color = 'red';
+                text02.style.backgroundColor = 'yellow';
+                text03.style.display = 'none'
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <button type="button">버튼</button>
+
+    <div class="text">내용1</div>
+    <div class="text-02">내용2</div>
+    <div id="text-03">내용3</div>
+</body>
+
+</html>

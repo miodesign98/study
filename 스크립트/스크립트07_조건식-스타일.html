@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건식-스타일</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(255, 255, 255);
+        }
+    </style>
+
+    <script>
+        window.onload = () => {
+            let body = document.getElementsByTagName('body')[0];
+            let btn = document.getElementsByClassName('btn')[0];
+
+            btn.addEventListener('click', () => {
+                //if(body가 가지는 배경색이 흰색일때)
+                if(getComputedStyle(body).backgroundColor == 'rgb(255, 255, 255)') {
+                    /* alert('컬러맞음') */
+                    body.style.backgroundColor = '#000000';
+                } else{
+                    /* alert('컬러맞지않음') */
+                    body.style.backgroundColor = '#ffffff';
+                }
+            });
+        };/* script end */
+    </script>
+</head>
+<body>
+    <button type="button" class="btn">배경색변경</button>
+</body>
+</html>

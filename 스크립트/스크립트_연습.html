@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+    <link rel="stylesheet" href="css/연습.css">
+
+    <script>
+        window.onload = () => {
+            let openBtn = document.getElementsByClassName('open_btn')[0];
+            let closeBtn = document.getElementsByClassName('close_btn')[0];
+            let searchBox = document.getElementsByClassName('search_box')[0];
+
+            openBtn.addEventListener('click', () => {
+                closeBtn.style.display = 'block'
+                openBtn.style.display = 'none'
+                searchBox.style.display = 'block'
+            });
+            closeBtn.addEventListener('click', () => {
+                closeBtn.style.display = 'none'
+                openBtn.style.display = 'block'
+                searchBox.style.display = 'none'
+            });
+        };
+    </script>
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="inner">
+            <h1 class="logo"><a href="#">logo</a></h1>
+            <nav class="nav">
+                <div class="gnb">
+                    <li><a href="#">manu1</a></li>
+                    <li><a href="#">manu2</a></li>
+                    <li><a href="#">manu3</a></li>
+                    <li><a href="#">manu4</a></li>
+                    <li><a href="#">manu5</a></li>
+                </div><!-- navend -->
+            </nav>
+
+            <div class="search_wrap">
+                <button type="button" class="btn open_btn">검색하기</button>
+                <button type="button" class="btn close_btn">검색닫기</button>
+            </div><!--search_wrap end -->
+        </div><!-- inner emd -->
+
+        <div class="search_box">
+            <input type="text" name="" id="" placeholder="검색어 입력">
+            <img src="img/search_24dp_333_FILL0_wght200_GRAD0_opsz24.png" alt="">
+        </div><!-- search_box end -->
+    </header>
+</body>
+
+</html>
