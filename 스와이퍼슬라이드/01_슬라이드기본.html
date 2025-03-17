@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스와이퍼 기본</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="css/01.css">
+
+    <script>
+        window.onload = () => {
+            var swiper = new Swiper(".visual_swiper", {
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                autoplay: {
+                    delay: 2500,/* 1초=1000 */
+                    disableOnInteraction: false,
+                    /* 드래그했을때 슬라이드를 멈출것인지 false = 멈추지 않겠다 true = 멈춤*/
+                }
+            });
+        }
+    </script>
+
+</head>
+
+<body>
+    <section class="visual">
+
+        <!-- Swiper -->
+        <div class="swiper visual_swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/PremiumNamaChocolateCollectionPhoto1.jpg" alt="">
+                    <div class="text">
+                        <h2>visual slide</h2>
+                        <a href="#">바로가기</a>
+                    </div><!-- text end -->
+                </div><!-- swiper-slide -->
+
+                <div class="swiper-slide">
+                    <img src="img/Pure_Chocolate_10.10.23_400x.jpg" alt="">
+                    <div class="text">
+                        <h2>visual slide</h2>
+                        <a href="#">바로가기</a>
+                    </div><!-- text end -->
+                </div><!-- swiper-slide -->
+
+                <div class="swiper-slide">
+                    <img src="img/ROYCE_Prestige_Nama_Chocolate_Collection_-_Nama_Chocolate_Creative_Photo_3.jpg"
+                        alt="">
+                    <div class="text">
+                        <h2>visual slide</h2>
+                        <a href="#">바로가기</a>
+                    </div><!-- text end -->
+                </div><!-- swiper-slide -->
+
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div><!-- swiper end -->
+
+    </section><!-- visual end -->
+</body>
+
+</html>

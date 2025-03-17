@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네비게이션 + 페이징스타일변경</title>
+     <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="css/03.css">
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    window.onload = () => {
+        var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      }
+    });
+    }
+  </script>
+</head>
+
+<body>
+    <section class="visual">
+        <h2>navigation + pagingstyle</h2>
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="image">
+                        <img src="img/PremiumNamaChocolateCollectionPhoto1.jpg" alt="">
+                    </div><!-- image end -->
+                    <p>slide 1</p>
+                </div><!-- swiper-slide end -->
+                
+                <div class="swiper-slide">
+                    <div class="image">
+                        <img src="img/Pure_Chocolate_10.10.23_400x.jpg" alt="">
+                    </div><!-- image end -->
+                    <p>slide 2</p>
+                </div><!-- swiper-slide end -->
+
+                <div class="swiper-slide">
+                    <div class="image">
+                        <img src="img/ROYCE_Prestige_Nama_Chocolate_Collection_-_Nama_Chocolate_Creative_Photo_3.jpg" alt="">
+                    </div><!-- image end -->
+                    <p>slide 3</p>
+                </div><!-- swiper-slide end -->
+
+                <div class="swiper-slide">
+                    <div class="image">
+                        <img src="img/PremiumNamaChocolateCollectionPhoto1.jpg" alt="">
+                    </div><!-- image end -->
+                    <p>slide 4</p>
+                </div><!-- swiper-slide end -->
+
+                <div class="swiper-slide">
+                    <div class="image">
+                        <img src="img/PremiumNamaChocolateCollectionPhoto1.jpg" alt="">
+                    </div><!-- image end -->
+                    <p>slide 5</p>
+                </div><!-- swiper-slide end -->
+
+                <div class="swiper-slide">
+                    <div class="image">
+                        <img src="img/PremiumNamaChocolateCollectionPhoto1.jpg" alt="">
+                    </div><!-- image end -->
+                    <p>slide 6</p>
+                </div><!-- swiper-slide end -->
+
+                <div class="swiper-slide">
+                    <div class="image">
+                        <img src="img/PremiumNamaChocolateCollectionPhoto1.jpg" alt="">
+                    </div><!-- image end -->
+                    <p>slide 7</p>
+                </div><!-- swiper-slide end -->
+
+            </div><!-- swiper-wrapper end -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section><!-- visual end -->
+</body>
+
+</html>

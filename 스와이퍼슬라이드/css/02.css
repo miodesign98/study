@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+.perview {
+    width: 1280px;
+    margin: 100px auto;
+}
+
+.perview .swiper-slide .image{
+    height: 500px;
+    position: relative;
+}
+.perview .swiper-slide .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.perview .swiper-slide p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 30px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 30px;
+}

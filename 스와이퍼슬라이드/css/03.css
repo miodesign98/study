@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.visual {
+    width: 1280px;
+    margin: 100px auto;
+    position: relative;
+}
+
+.visual .swiper-slide .image{
+    width: 100%;
+    height: 500px;
+}
+.visual .swiper-slide .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.visual .swiper-button-next, /* ,는 선택자 추가할때 사용 */
+.visual .swiper-button-prev{
+    color: pink;
+}
+
+.visual .swiper-button-next:after, 
+.visual .swiper-button-prev:after {
+    font-size: 30px;
+}
+
+.visual .swiper-button-next, 
+.visual .swiper-rtl .swiper-button-prev{
+    right: -50px;
+}
+
+.visual .swiper-button-prev, 
+.visual.swiper-rtl .swiper-button-next {
+    left: -50px;
+}
+
+.visual .swiper-horizontal>.swiper-pagination-bullets, 
+.visual .swiper-pagination-bullets.swiper-pagination-horizontal, 
+.visual .swiper-pagination-custom, 
+.visual .swiper-pagination-fraction{
+    bottom: var(--swiper-pagination-bottom, -20px);
+}
+.visual .swiper-pagination-bullet {
+    border-radius: var(--swiper-pagination-bullet-border-radius, 50%);
+    background: var(--swiper-pagination-bullet-inactive-color, black);
+}
+.visual .swiper-pagination-bullet-active {
+    background: blueviolet;
+    width: 30px;
+    border-radius: 30px;
+}
+
+.visual .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, 
+.visual .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 10px);
+}
+
+.visual .swiper{
+    position: static;
+}
