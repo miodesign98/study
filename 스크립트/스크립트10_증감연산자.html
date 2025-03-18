@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>증감연산자</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .btn_wrap{
+            text-align: center;
+        }
+        .btn_wrap button{
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+        }
+        .btn_wrap span{
+            font-size: 20px;
+        }
+    </style>
+    <script>
+        window.onload = () => {
+            let num = document.getElementsByClassName('num')[0];
+            let btnDown = document.getElementsByClassName('down')[0];
+            let btnUp = document.getElementsByClassName('up')[0];
+
+            let i = 0;
+
+            btnUp.addEventListener('click', () => {
+                //console.log(i++)
+                i++;
+                num.innerHTML = i;
+            });
+            btnDown.addEventListener('click', () => {
+                i--;
+                //i값보다 0이 크면 i값을 0으로 설정
+                if(i < 0){i=0;}
+                num.innerHTML = i;
+            });
+        };
+    </script>
+</head>
+<body>
+    <div class="btn_wrap">
+        <button type="button" class="down">-</button>
+        <span class="num">0</span>
+        <button type="button"class="up">+</button>
+    </div><!-- button_wrap end -->
+</body>
+</html>

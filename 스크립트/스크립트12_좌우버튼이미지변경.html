@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>좌우버튼 이미지변경</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .box{
+            width: 500px;
+            margin: 50px auto;
+        }
+        .box img{
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+        .box .btn_wrap{
+            display: flex;
+            justify-content: space-between;
+        }
+        .box .btn_wrap button{
+            width: 230px;
+            height: 50px;
+
+        }
+    </style>
+    <script>
+        window.onload = () => {
+
+            let box = document.getElementsByClassName('box')[0];
+            let img = box.getElementsByTagName('img')[0];
+            let prevBtn = box.getElementsByClassName('prev')[0];
+            let nextBtn = box.getElementsByClassName('next')[0];
+
+            let num = box.getElementsByClassName('num')[0];
+            let allNum = box.getElementsByClassName('all_num')[0];
+
+            let imgList = ['img/patrick-ryan-3kUIaB2EPp8-unsplash.jpg', 'img/nattu-adnan-Ai2TRdvI6gM-unsplash.jpg', 'img/sean-7K24SkQUbSw-unsplash.jpg'];
+            let i = 0;
+
+            console.log(i)
+
+            allNum.innerHTML = '/' + imgList.length
+
+            nextBtn.addEventListener('click', () => {
+                i++;
+                //i값이 imgList가 가지는 수보다 크거나 같을때 i값은 다시 0으로 초기화된다.
+                if( i >= imgList.length ){ 
+                    i = imgList.length -1 ;//마지막 사진에서 멈춤
+                    //i = 0; 다시 0으로 돌아가서 무한반복
+                }
+                img.src = imgList[i];
+                num.innerHTML = i + 1;
+            });
+
+            prevBtn.addEventListener('click', () => {
+                i--;
+                if(i < 0){
+                    i = 0;
+                };//i값이 0보다 작을때 i는 0값을 가진다
+                img.src = imgList[i];
+                num.innerHTML = i+1;
+            });
+
+            
+        }; //script end
+    </script>
+</head>
+<body>
+    <div class="box">
+        <img src="img/patrick-ryan-3kUIaB2EPp8-unsplash.jpg" alt="">
+        <div class="btn_wrap">
+            <button type="button" class="prev">이전</button>
+            <button type="button" class="next">다음</button>
+        </div><!-- btn_wrap end -->
+        
+        <div class="num_wrap">
+            <span class="num">1</span>
+            <span class="all_num"></span>
+        </div><!-- num_wrap end -->
+    </div><!-- box end -->
+</body>
+</html>

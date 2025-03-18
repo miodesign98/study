@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        img {
+            width: 400px;
+            height: 400px;
+            display: block;
+        }
+    </style>
+    <script>
+        window.onload = () => {
+
+            let btn = document.getElementsByClassName('btn')[0];
+            let text = document.getElementsByClassName('text')[0];
+            let image = document.getElementsByTagName('img')[0];
+
+            let textList = ['이미지1', '이미지2', '이미지3'];//배열
+            let imageList = ['img/nattu-adnan-Ai2TRdvI6gM-unsplash.jpg', 'img/patrick-ryan-3kUIaB2EPp8-unsplash.jpg',
+            'img/sean-7K24SkQUbSw-unsplash.jpg'];
+            let i = 0;//초기값]
+
+            console.log(textList.length);//length = 갯수 또는 길이값을 찾아주는 함수
+
+            btn.addEventListener('click', () => {
+                i++;
+                //i값은 계속 늘어남 그래서 마지막 값을 지정
+                if(i >= textList.length ){ i=0; }
+                text.innerHTML = textList[i];
+                image.src = imageList[i];
+            });
+
+        };//script end
+    </script>
+</head>
+
+<body>
+    <button type="button" class="btn">버튼</button>
+    <img src="img/nattu-adnan-Ai2TRdvI6gM-unsplash.jpg" alt="">
+    <p class="text">이미지1</p>
+</body>
+
+</html>
