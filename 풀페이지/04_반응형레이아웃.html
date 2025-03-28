@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04반응형레이아웃</title>
+    <link rel="stylesheet" href="lib/fullpage.min.css">
+
+    <link rel="stylesheet" href="css/04.css">
+
+    <script src="lib/fullpage.min.js"></script>
+    <script>
+        window.onload = () => {
+            var myFullpage = new fullpage('#fullpage', {
+
+                anchors: ['firstPage', 'secondPage', '3rdPage'],
+                navigation: true,
+                navigationTooltips: ['Page 1', 'Page 2', 'page3'],
+                showActiveTooltip: true,
+                menu: '#menu',
+                responsiveWidth: 1024,
+            });
+        };
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="inner">
+            <h1 class="logo"><a href="#">logo</a></h1>
+
+            <nav class="nav">
+                <ul class="gnb">
+                    <li><a href="#">menu1</a></li>
+                    <li><a href="#">menu2</a></li>
+                    <li><a href="#">menu3</a></li>
+                    <li><a href="#">menu4</a></li>
+                    <li><a href="#">menu5</a></li>
+                </ul><!-- gnb -->
+            </nav>
+        </div><!-- inner -->
+    </header>
+    <div id="fullpage">
+        <section class="section fp-auto-height-responsive" id="section01">
+            <div class="inner">
+                <div class="item_wrap">
+                    <div class="item">
+                        <a href="#">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, voluptatum modi culpa
+                                tenetur perferendis consectetur id commodi consequatur adipisci accusamus laboriosam
+                                perspiciatis magnam quo pariatur dicta autem rerum optio maxime?</p>
+                        </a>
+                    </div><!-- item -->
+
+                    <div class="item">
+                        <a href="#">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, voluptatum modi culpa
+                                tenetur perferendis consectetur id commodi consequatur adipisci accusamus laboriosam
+                                perspiciatis magnam quo pariatur dicta autem rerum optio maxime?</p>
+                        </a>
+                    </div><!-- item -->
+
+                    <div class="item">
+                        <a href="#">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, voluptatum modi culpa
+                                tenetur perferendis consectetur id commodi consequatur adipisci accusamus laboriosam
+                                perspiciatis magnam quo pariatur dicta autem rerum optio maxime?</p>
+                        </a>
+                    </div><!-- item -->
+
+                    <div class="item">
+                        <a href="#">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, voluptatum modi culpa
+                                tenetur perferendis consectetur id commodi consequatur adipisci accusamus laboriosam
+                                perspiciatis magnam quo pariatur dicta autem rerum optio maxime?</p>
+                        </a>
+                    </div><!-- item -->
+                </div><!-- item_wrap -->
+            </div><!-- inner -->
+        </section><!-- section01 -->
+
+        <section class="section " id="section02">
+
+        </section><!-- section02 -->
+
+        <section class="section " id="section03">
+
+        </section><!-- section03 -->
+    </div><!-- fullpage -->
+</body>
+
+</html>
