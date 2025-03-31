@@ -1,0 +1,150 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'TourEasy';
+    src: url('../font/TourEasy/TourEasyT.woff2') format('woff2'),
+        url('../font/TourEasy/TourEasyT.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url('NotoSansKR-ExtraBold.woff2') format('woff2'),
+        url('NotoSansKR-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url('NotoSansKR-Medium.woff2') format('woff2'),
+        url('NotoSansKR-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url('NotoSansKR-Light.woff2') format('woff2'),
+        url('NotoSansKR-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.wrap .inner {
+    width: 1280px;
+    margin: 125px auto;
+}
+
+.wrap .inner h2 {
+    text-align: center;
+    font-size: 50px;
+    font-family: 'TourEasy';
+    font-weight: normal;
+    font-style: normal;
+}
+
+.inner .menu {
+    margin-top: 65px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    color: #ccc;
+    font-size: 36px;
+    font-family: 'Noto Sans KR';
+    font-weight: bold;
+    font-style: normal;
+}
+.inner .menu li.active{
+    color: #333;
+}
+
+.inner .item_warp {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    margin-top: 45px;
+    display: none;
+}
+.inner .item_warp.active{
+    display: flex;
+}
+
+.inner .item_warp .item {
+    width: 316px;
+}
+
+.inner .item_warp .item img {
+    width: 100%;
+    height: 316px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.inner .item_warp .item .text {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+}
+
+.inner .item_warp .item .text span {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.inner .item_warp .item .text span b {
+    color: red;
+}
+
+.inner .item_warp .item .text h3 {
+    margin-top: 14px;
+    font-size: 18px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* 최대 줄 수 */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.inner .item_warp .item .text p{
+    margin-top: 28px;
+    font-size: 16px;
+    color: #999;
+    text-decoration: line-through;
+}
+.inner .item_warp .item .text .price{
+    display: flex;
+    gap: 10px;
+}
+.inner .item_warp .item .text .price p{
+ color: #E53E30;
+ font-size: 23px;
+ font-weight: 700;
+ text-decoration:none;
+ margin: 0;
+}
+.inner .item_warp .item .text .price strong{
+    font-family: 'TourEasyT';
+    font-size: 23px;
+}
