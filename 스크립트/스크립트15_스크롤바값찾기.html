@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크롤바값찾기</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header {
+            height: 100px;
+            width: 100%;
+            background-color: aqua;
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .section {
+            height: 3000px;
+            font-size: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
+    <script>
+
+        window.onload = () => {
+
+            let header = document.querySelector('.header');
+
+            window.addEventListener('scroll', () => {
+                //화면의 세로 스크롤바 값
+                //window.scrollY
+                let scrollBar = window.scrollY;
+                
+                header.innerHTML = scrollBar;
+
+            });/* window scroll end */
+
+        };//script end
+
+    </script>
+
+</head>
+
+<body>
+    <header class="header">header</header>
+    <section class="section">section</section>
+</body>
+
+</html>

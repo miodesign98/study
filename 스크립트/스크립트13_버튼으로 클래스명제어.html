@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>버튼으로 클래스명</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .menu li.active {
+            color: red;
+        }
+    </style>
+
+    <script>
+
+        window.onload = () => {
+
+            let menu = document.querySelectorAll('.menu li');
+            let btn = document.querySelector('.btn');
+            let i = 0;
+
+            btn.addEventListener('click', () => {
+
+                i++;
+
+                menu[i - 1].classList.remove('active');
+
+                //i값이 변수menu가 가지는 수보다 크거나 같아졌을때 i=0이다 
+                if (i <= menu.length) {
+                    i = 0;
+                };
+
+                menu[i].classList.add('active');
+            });
+
+        };/* script end */
+
+    </script>
+</head>
+
+<body>
+    <ul class="menu">
+        <li class="active">menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+        <li>menu5</li>
+    </ul>
+    <button type="button" class="btn">버튼</button>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경이미지적용</title>
+    <link rel="stylesheet" href="css/스크립트20.css">
+
+    <script>
+        window.onload = () => {
+
+            let section = document.querySelector('.section');
+            let item = section.querySelectorAll('.item');
+            let itemImage = section.querySelectorAll('.item img');
+
+            for (let i = 0; i < item.length; i++) {
+                item[i].addEventListener('mouseenter', () => {
+
+                    console.log(itemImage[i].src);
+
+                    section.style.backgroundImage = 'url('+ itemImage[i].src +')';
+
+                });
+            };
+
+        };
+    </script>
+</head>
+
+<body>
+    <section class="section">
+        <div class="inner">
+            <div class="item_wrap">
+                <div class="item">
+                    <div class="image">
+                        <img src="img/image1.jpg" alt="">
+                    </div><!-- image -->
+                    <h2>아이템 01</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In sunt libero nihil temporibus officia
+                        quasi, fuga quibusdam consequatur obcaecati laboriosam? Nam quae tempore officiis nulla aliquid
+                        pariatur laboriosam voluptatum veniam.</p>
+                </div><!-- item -->
+
+                <div class="item">
+                    <div class="image">
+                        <img src="img/image2.jpg" alt="">
+                    </div><!-- image -->
+                    <h2>아이템 02</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio facere eos minima perspiciatis
+                        neque unde ex autem vero illo labore, ipsam nisi et ut repudiandae incidunt vitae repellat
+                        dolorum id!</p>
+                </div><!-- item -->
+
+                <div class="item">
+                    <div class="image">
+                        <img src="img/image3.jpg" alt="">
+                    </div><!-- image -->
+                    <h2>아이템 03</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis porro harum consequatur,
+                        accusamus ducimus, qui culpa non eum suscipit quo facilis rerum a soluta itaque dolorum, quam
+                        adipisci quaerat odit?</p>
+                </div><!-- item -->
+
+                <div class="item">
+                    <div class="image">
+                        <img src="img/image4.jpg" alt="">
+                    </div><!-- image -->
+                    <h2>아이템 04</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, aliquid eligendi, voluptate
+                        perferendis unde numquam repudiandae repellendus cum optio aut impedit deleniti natus officia
+                        molestias qui tempora illum fuga rerum.</p>
+                </div><!-- item -->
+            </div><!-- item_wrap -->
+        </div><!-- inner -->
+    </section>
+</body>
+
+</html>

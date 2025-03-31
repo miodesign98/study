@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문for</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .menu li.active {
+            color: red;
+        }
+    </style>
+
+    <script>
+        window.onload = () => {
+            let menu = document.querySelectorAll('.menu li');
+            //반복문
+            //for(초기값; 조건식; 증감식){실행코드}
+            for (let i = 0; i < menu.length; i++) {
+                menu[i].addEventListener ('click', () => {
+                    console.log(i);
+                    menu[i].classList.add('active')
+                });
+            };
+
+           /*  for (let num = 1; num <= 5; num++) {
+                document.write("for문 수행 : <b>" + num + "</b><br/>")
+            }; */
+        };/* script end */
+    </script>
+</head>
+
+<body>
+    <ul class="menu">
+        <li class="active">menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+        <li>menu5</li>
+    </ul>
+</body>
+
+</html>

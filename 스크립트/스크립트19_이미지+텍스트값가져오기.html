@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지+텍스트값 가져오기</title>
+    <link rel="stylesheet" href="css/스크립트19.css">
+
+    <script>
+        window.onload = () => {
+            let section = document.querySelector('.section');
+            let itemDetailImage = section.querySelector('.item_detail img');
+            let itemDetailTitle = section.querySelector('.item_detail .title');
+            let itemDetailText = section.querySelector('.item_detail .text');
+
+            let item = section.querySelectorAll('.item');
+            let itemImage = section.querySelectorAll('.item .image img')
+            let itemTitle = section.querySelectorAll('.item .title')
+            let itemText = section.querySelectorAll('.item .text')
+
+            for (let i = 0; i < item.length; i++) {
+                item[i].addEventListener('mouseenter', () => {
+                    console.log(itemImage[i].src)
+                    console.log(itemTitle[i].innerHTML)
+
+
+                    itemDetailTitle.innerHTML = itemTitle[i].innerHTML;
+                    itemDetailText.innerHTML = itemText[i].innerHTML;
+                    itemDetailImage.src = itemImage[i].src;
+
+
+
+                    //item.classList.remove('active');
+                    item.forEach(itemIndex => {
+                        itemIndex.classList.remove('active');
+                    });
+                    item[i].classList.add('active');
+                });
+            };
+        };
+    </script>
+</head>
+
+<body>
+    <section class="section">
+        <div class="inner">
+            <div class="item_detail">
+                <div class="image">
+                    <img src="img/image1.jpg" alt="">
+                </div><!-- image end -->
+                <h2 class="title">item 01</h2>
+                <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error, quibusdam dicta
+                    exercitationem distinctio aliquam veritatis blanditiis unde debitis repellendus voluptatum maiores
+                    cumque quasi iure excepturi cum adipisci neque quidem? Ducimus.</p>
+            </div><!-- item_detail -->
+
+            <div class="item_wrap">
+                <div class="item active">
+                    <div class="image">
+                        <img src="img/image1.jpg" alt="">
+                    </div><!-- image end -->
+                    <h2 class="title">item 01</h2>
+                    <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error, quibusdam dicta
+                        exercitationem distinctio aliquam veritatis blanditiis unde debitis repellendus voluptatum
+                        maiores
+                        cumque quasi iure excepturi cum adipisci neque quidem? Ducimus.</p>
+                </div><!-- item -->
+
+                <div class="item">
+                    <div class="image">
+                        <img src="img/image2.jpg" alt="">
+                    </div><!-- image end -->
+                    <h2 class="title">item 02</h2>
+                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim adipisci dolor non
+                        reiciendis veritatis sunt amet dolore suscipit ea, voluptatum obcaecati, placeat officia
+                        delectus, animi modi necessitatibus quia? Magni, dolor.</p>
+                </div><!-- item -->
+
+                <div class="item">
+                    <div class="image">
+                        <img src="img/image3.jpg" alt="">
+                    </div><!-- image end -->
+                    <h2 class="title">item 03</h2>
+                    <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum tempore suscipit
+                        itaque quae enim qui. A inventore distinctio repudiandae, aliquam voluptate error optio odio,
+                        earum soluta obcaecati vel impedit nulla!</p>
+                </div><!-- item -->
+            </div><!-- item_wrap -->
+        </div><!-- inner end -->
+    </section>
+</body>
+
+</html>

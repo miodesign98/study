@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탭메뉴</title>
+    <link rel="stylesheet" href="css/스크립트18.css">
+
+    <script>
+        window.onload = () => {
+            let menu = document.querySelectorAll('.menu li');
+            let itemWrap = document.querySelectorAll('.item_wrap');
+
+            for (let i = 0; i < menu.length; i++){
+                menu[i].addEventListener('click', () => {
+                    //itemWrap[0].classList.remove('active');
+                    //itemWrap[1].classList.remove('active');
+
+                    //foreach() : 반복적으로 구성된 배열을 실행
+                    //itemWrapIndex = [itemWap[0], itemWap[1]]
+                    itemWrap.forEach(itemWrapIndex => {
+                        itemWrapIndex.classList.remove('active');
+                    });
+
+                    itemWrap[i].classList.add('active');
+
+                    menuIndex.classList.remove('active');
+                    menu[i].classList.add('active');
+            
+                });
+            };
+        };
+    </script>
+</head>
+
+<body>
+    <section class="section">
+        <div class="inner">
+            <ul class="menu">
+                <li class="active">menu1</li>
+                <li>menu2</li>
+                <li>menu3</li>
+                <li>menu4</li>
+            </ul>
+
+            <div class="item_wrap active">
+                <div class="item">
+                    <a href="#">
+                        <img src="img/image1.jpg" alt="1">
+                        <h2>아이템 1</h2>
+                    </a>
+                </div> <!-- item -->
+
+                <div class="item">
+                    <a href="#">
+                        <img src="img/image2.jpg" alt="2">
+                        <h2>아이템 2</h2>
+                    </a>
+                </div> <!-- item -->
+
+                <div class="item">
+                    <a href="#">
+                        <img src="img/image3.jpg" alt="3">
+                        <h2>아이템 3</h2>
+                    </a>
+                </div> <!-- item -->
+
+                <div class="item">
+                    <a href="#">
+                        <img src="img/image4.jpg" alt="4">
+                        <h2>아이템 4</h2>
+                    </a>
+                </div> <!-- item -->
+            </div><!-- item_wrap -->
+
+            <div class="item_wrap">
+                <div class="item">
+                    <a href="#">
+                        <img src="img/image5.jpg" alt="5">
+                        <h2>아이템 5</h2>
+                    </a>
+                </div> <!-- item -->
+
+                <div class="item">
+                    <a href="#">
+                        <img src="img/image4.jpg" alt="4">
+                        <h2>아이템 4</h2>
+                    </a>
+                </div> <!-- item -->
+
+                <div class="item">
+                    <a href="#">
+                        <img src="img/image3.jpg" alt="3">
+                        <h2>아이템 3</h2>
+                    </a>
+                </div> <!-- item -->
+
+                <div class="item">
+                    <a href="#">
+                        <img src="img/image2.jpg" alt="2">
+                        <h2>아이템 2</h2>
+                    </a>
+                </div> <!-- item -->
+            </div><!-- item_wrap -->
+
+            <div class="item_wrap">
+                <div class="item">
+                    <a href="#">
+                        <img src="img/image5.jpg" alt="5">
+                        <h2>아이템 3</h2>
+                    </a>
+                </div> <!-- item -->
+
+                <div class="item">
+                    <a href="#">
+                        <img src="img/image4.jpg" alt="4">
+                        <h2>아이템3</h2>
+                    </a>
+                </div> <!-- item -->
+
+                <div class="item">
+                    <a href="#">
+                        <img src="img/image3.jpg" alt="3">
+                        <h2>아이템 3</h2>
+                    </a>
+                </div> <!-- item -->
+
+                <div class="item">
+                    <a href="#">
+                        <img src="img/image2.jpg" alt="2">
+                        <h2>아이템 3</h2>
+                    </a>
+                </div> <!-- item -->
+            </div><!-- item_wrap -->
+
+            <div class="item_wrap">
+                <div class="item">
+                    <a href="#">
+                        <img src="img/image5.jpg" alt="5">
+                        <h2>아이템 4</h2>
+                    </a>
+                </div> <!-- item -->
+
+                <div class="item">
+                    <a href="#">
+                        <img src="img/image4.jpg" alt="4">
+                        <h2>아이템 4</h2>
+                    </a>
+                </div> <!-- item -->
+
+                <div class="item">
+                    <a href="#">
+                        <img src="img/image3.jpg" alt="3">
+                        <h2>아이템 4</h2>
+                    </a>
+                </div> <!-- item -->
+
+                <div class="item">
+                    <a href="#">
+                        <img src="img/image2.jpg" alt="2">
+                        <h2>아이템 4</h2>
+                    </a>
+                </div> <!-- item -->
+            </div><!-- item_wrap -->
+        </div><!-- inner end -->
+    </section>
+</body>
+
+</html>

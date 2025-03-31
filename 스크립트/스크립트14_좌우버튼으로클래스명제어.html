@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>좌우버튼으로 클래스명제어</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        body {
+            background-color: rgb(255, 255, 255);
+        }
+
+        body.active {
+            background-color: black;
+            color: #fff;
+        }
+
+        .list {
+            width: 1280px;
+            margin: 50px auto;
+            position: relative;
+        }
+
+        .list .item_wrap .item {
+            width: 100%;
+            display: none;
+        }
+
+        .list .item_wrap .item.active {
+            display: block;
+        }
+
+        .list .item_wrap .item img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .list .btn_wrap {
+            width: 1280px;
+            display: flex;
+            justify-content: space-between;
+
+            position: absolute;
+            top: 230px;
+            left: 0;
+        }
+
+        .list .btn_wrap button {
+            width: 50px;
+            height: 50px;
+            border: 0;
+            background-color: rgba(0, 0, 0, 0.3);
+            color: white;
+        }
+
+        .list .btn_wrap button.next {
+            left: auto;
+            right: 0;
+        }
+
+        @media screen and (max-width:1280px) {
+            .list {
+                width: 100%;
+            }
+        }
+
+        /* and앞뒤로 꼭 비우기 ;넣지않기 */
+    </style>
+
+    <script>
+
+        window.onload = () => {
+
+            let item = document.querySelectorAll('.list .item');
+            let prevBtn = document.querySelector('.list .prev');
+            let nextBtn = document.querySelector('.list .next');
+
+            let i = 0;
+
+            setInterval(() => {
+
+                i++;
+
+                item[i - 1].classList.remove('active');
+
+                if (i >= item.length) {
+                    i = 0;
+                };
+
+                item[i].classList.add('active');
+
+            },2000); 
+
+            nextBtn.addEventListener('click', () => {
+
+                i++;
+
+                item[i - 1].classList.remove('active');
+
+                if (i >= item.length) {
+                    i = item.length - 1;//-1하면 처음으로 안돌아가고 0이면 무한반복
+                };
+
+                item[i].classList.add('active');
+
+            });
+
+            prevBtn.addEventListener('click', () => {
+
+                i--;
+
+                item[i + 1].classList.remove('active');
+
+                if (i <= 0) {
+                    i = 0;
+                };
+
+                item[i].classList.add('active');
+
+            });
+
+
+            let body = document.querySelector('body');
+            let modeBtn = document.querySelector('.mode');
+            let img = document.querySelector('.mode img')
+
+            modeBtn.addEventListener('click', () => {
+
+                if (getComputedStyle(body).backgroundColor == 'rgb(255, 255, 255)') {
+                    body.classList.add('active');
+                    img.src = 'img/아이콘/태양.png';
+                } else {
+                    body.classList.remove('active');
+                    img.src = 'img/아이콘/달.png';
+                };
+
+            });
+
+
+
+        };
+
+    </script>
+</head>
+
+<body>
+    <button type="button" class="mode">
+        <img src="img/아이콘/달.png" alt="">
+    </button>
+    <div class="list">
+        <div class="item_wrap">
+            <div class="item active">
+                <img src="img/nattu-adnan-Ai2TRdvI6gM-unsplash.jpg" alt="">
+                <div class="text">
+                    <h2>title1</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae explicabo, voluptatibus veniam
+                        minima exercitationem ut cupiditate eligendi totam consectetur. Voluptatem, tempore. Sed non
+                        autem alias aspernatur in hic quisquam reiciendis.</p>
+                </div><!-- textend -->
+            </div><!-- item end -->
+
+            <div class="item">
+                <img src="img/patrick-ryan-3kUIaB2EPp8-unsplash.jpg" alt="">
+                <div class="text">
+                    <h2>title2</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae explicabo, voluptatibus veniam
+                        minima exercitationem ut cupiditate eligendi totam consectetur. Voluptatem, tempore. Sed non
+                        autem alias aspernatur in hic quisquam reiciendis.</p>
+                </div><!-- textend -->
+            </div><!-- item end -->
+
+            <div class="item">
+                <img src="img/sean-7K24SkQUbSw-unsplash.jpg" alt="">
+                <div class="text">
+                    <h2>title3</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae explicabo, voluptatibus veniam
+                        minima exercitationem ut cupiditate eligendi totam consectetur. Voluptatem, tempore. Sed non
+                        autem alias aspernatur in hic quisquam reiciendis.</p>
+                </div><!-- textend -->
+            </div><!-- item end -->
+
+        </div><!-- item_wrap -->
+
+        <div class="btn_wrap">
+            <button type="button" class="prev">이전</button>
+            <button type="button" class="next">다음</button>
+        </div><!-- btn_wrap end -->
+    </div><!-- list end -->
+</body>
+
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크립트 여행이지</title>
+    <link rel="stylesheet" href="css/여행이지.css">
+
+    <script>
+        window.onload = () => {
+            let menu = document.querySelectorAll('.menu li')
+            let itemWrap = document.querySelectorAll('.item_warp')
+
+            for (let i = 0; i < menu.length; i++) {
+                menu[i].addEventListener('click', () => {
+
+                    itemWrap.forEach(itemWrapIndex => {
+                        itemWrapIndex.classList.remove('active');
+                    });
+                    itemWrap[i].classList.add('active');
+                    
+                    menu.forEach(menuIndex => {
+                        menuIndex.classList.remove('active');
+                    });
+                    //menuIndex.classList.remove('active');
+                    menu[i].classList.add('active');
+                });
+            };
+
+        };
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="inner">
+            <h2>3월🌼 봄맞이 최대 20만원 할인 쿠폰!</h2>
+
+            <ul class="menu">
+                <li class="active">#유럽🧡</li>
+                <li> #미주/남태평양💜</li>
+                <li>#일본🤎</li>
+                <li>#동남아💛</li>
+            </ul><!-- menu -->
+
+            <div class="item_warp active">
+                <div class="item">
+                    <img src="img/여행이지/유럽1.png" alt="유럽1">
+                    <div class="text">
+                        <span>🎫<b>쿠폰</b>혜택</span>
+                        <h3>◆출발확정/여성 룸조인 가능!!◆ [ALL IN ONE👑] 서유럽 4국(영/프/스/이)+모나코 12</h3>
+                        <p>4,290,000원</p>
+                        <div class="price">
+                            <p>150,000원</p>
+                            <strong>4,140,000 원~</strong>
+                        </div><!-- price end -->
+                    </div><!-- text -->
+                </div><!-- item -->
+
+                <div class="item">
+                    <img src="img/여행이지/유럽2.jpg" alt="유럽2">
+                    <div class="text">
+                        <span>🎫<b>쿠폰</b>혜택</span>
+                        <h3>◆출발확정◆[알프스Together] 스위스/이탈리아 9일 #2大알프스(마테호른/돌로미테)</h3>
+                        <p>2,699,000원</p>
+                        <div class="price">
+                            <p>100,000원</p>
+                            <strong>2,599,000 원~</strong>
+                        </div><!-- price end -->
+                    </div><!-- text -->
+                </div><!-- item -->
+
+                <div class="item">
+                    <img src="img/여행이지/유럽3.jpg" alt="유럽3">
+                    <div class="text">
+                        <span>🎫<b>쿠폰</b>혜택</span>
+                        <h3>★출발집중★한 걸음마다 찬란한 그곳 #아시아나직항-스페인 포르투갈 9일 <4성급 숙박>
+                        </h3>
+                        <p>2,699,000원</p>
+                        <div class="price">
+                            <p>150,000원</p>
+                            <strong>2,549,000 원</strong>
+                        </div><!-- price end -->
+                    </div><!-- text -->
+                </div><!-- item -->
+            </div><!-- item_wrap -->
+
+            <div class="item_warp">
+                <div class="item">
+                    <img src="img/여행이지/미주1.jpg" alt="유럽1">
+                    <div class="text">
+                        <span>🎫<b>쿠폰</b>혜택</span>
+                        <h3>실시간 항공 [나를 찾아 떠나는 힐링 여행] 대한항공 인도+네팔 12일 #기차이동 #항공이동 #에로틱19금</h3>
+                        <p>2,290,000원</p>
+                        <div class="price">
+                            <p>50,000원</p>
+                            <strong>2,240,000 원~</strong>
+                        </div><!-- price end -->
+                    </div><!-- text -->
+                </div><!-- item -->
+
+                <div class="item">
+                    <img src="img/여행이지/미주2.jpg" alt="유럽2">
+                    <div class="text">
+                        <span>🎫<b>쿠폰</b>혜택</span>
+                        <h3>★잔여4석★🌼브루클린의 멋진순간🌼 미동부+캐나다동부/나이아가라 폴스뷰 12일</h3>
+                        <p>4,399,000원</p>
+                        <div class="price">
+                            <p>100,000원
+                                </p>
+                            <strong>4,299,000 원~</strong>
+                        </div><!-- price end -->
+                    </div><!-- text -->
+                </div><!-- item -->
+
+                <div class="item">
+                    <img src="img/여행이지/미주3,4.jpg" alt="유럽3">
+                    <div class="text">
+                        <span>🎫<b>쿠폰</b>혜택</span>
+                        <h3>[매력 속에 풍덩! Under The 𝗦𝘆𝗱𝗻𝗲𝘆 6일] #시드니 #본다이비치 #저비스베이 #하이암스비치 #울릉공
+                        </h3>
+                        <p>3,890,000원</p>
+                        <div class="price">
+                            <p>50,000원
+                               </p>
+                            <strong> 3,840,000 원~</strong>
+                        </div><!-- price end -->
+                    </div><!-- text -->
+                </div><!-- item -->
+
+                <div class="item">
+                    <img src="img/여행이지/미주3,4.jpg" alt="유럽3">
+                    <div class="text">
+                        <span>🎫<b>쿠폰</b>혜택</span>
+                        <h3>[매력 속에 풍덩! Under The 𝗦𝘆𝗱𝗻𝗲𝘆 6일] #시드니 #본다이비치 #저비스베이 #하이암스비치 #울릉공
+                        </h3>
+                        <p>3,890,000원</p>
+                        <div class="price">
+                            <p>70,000원</p>
+                            <strong>2,770,000 원~</strong>
+                        </div><!-- price end -->
+                    </div><!-- text -->
+                </div><!-- item -->
+            </div><!-- item_wrap -->
+
+            <div class="item_warp">
+                <div class="item">
+                    <img src="img/여행이지/일본1.jpg" alt="일본1">
+                    <div class="text">
+                        <span>🎫<b>쿠폰</b>혜택</span>
+                        <h3>●출발확정●북해도4일 #하코다테#야경에반하다#로프웨이#통유리너머로#도야호수뷰-노천온천</h3>
+                        <p>999,000원</p>
+                        <div class="price">
+                            <p>50,000원</p>
+                            <strong>949,000 원~</strong>
+                        </div><!-- price end -->
+                    </div><!-- text -->
+                </div><!-- item -->
+
+                <div class="item">
+                    <img src="img/여행이지/일본2.jpg" alt="일본2">
+                    <div class="text">
+                        <span>🎫<b>쿠폰</b>혜택</span>
+                        <h3>●선착순특가/출발확정●오사카3일 #교토,고베,오하라#시내중심+천연온천호텔연박#무료야식&다도체험</h3>
+                        <p>799,000원</p>
+                        <div class="price">
+                            <p>50,000원
+                                </p>
+                            <strong>749,000 원~</strong>
+                        </div><!-- price end -->
+                    </div><!-- text -->
+                </div><!-- item -->
+
+                <div class="item">
+                    <img src="img/여행이지/일본3.jpg" alt="일본3">
+                    <div class="text">
+                        <span>🎫<b>쿠폰</b>혜택</span>
+                        <h3>오사카3일 #고베,나라,교토#야경맛집,온천호텔#노면전차</h3>
+                        <p>799,000원</p>
+                        <div class="price">
+                            <p>50,000원</p>
+                            <strong>749,000 원~</strong>
+                        </div><!-- price end -->
+                    </div><!-- text -->
+                </div><!-- item -->
+            </div><!-- item_wrap -->
+
+            <div class="item_warp">
+                <div class="item">
+                    <img src="img/여행이지/동남아1.jpg" alt="동남아1">
+                    <div class="text">
+                        <span>🎫<b>쿠폰</b>혜택</span>
+                        <h3>[◑푸꾸옥 5성급 스파앤리조트 빈펄리조트◐]전일 조식포함+성인4/6/8인이상 풀빌라UP!+디럭스룸</h3>
+                        <p>649,000원</p>
+                        <div class="price">
+                            <p>30,000원
+                                </p>
+                            <strong>619,000 원~</strong>
+                        </div><!-- price end -->
+                    </div><!-- text -->
+                </div><!-- item -->
+
+                <div class="item">
+                    <img src="img/여행이지/동남아2.jpg" alt="동남아2">
+                    <div class="text">
+                        <span>🎫<b>쿠폰</b>혜택</span>
+                        <h3>💛출발확정💛[NO팁NO옵션NO쇼핑] ★오전출발★기내식포함+씨뷰UP!!+선셋요트투어+무앙보</h3>
+                        <p>1,229,000원</p>
+                        <div class="price">
+                            <p>100,000원
+                                </p>
+                            <strong>1,129,000 원~</strong>
+                        </div><!-- price end -->
+                    </div><!-- text -->
+                </div><!-- item -->
+
+                <div class="item">
+                    <img src="img/여행이지/동남아3.jpg" alt="동남아3">
+                    <div class="text">
+                        <span>🎫<b>쿠폰</b>혜택</span>
+                        <h3>[쉬러GO!★스완도르 리조트★] 올인클루시브+디럭스씨뷰+7시얼체OR18시레체+편도픽업1회 나트</h3>
+                        <p>809,000원</p>
+                        <div class="price">
+                            <p>30,000원</p>
+                            <strong>779,000 원~</strong>
+                        </div><!-- price end -->
+                    </div><!-- text -->
+                </div><!-- item -->
+
+                <div class="item">
+                    <img src="img/여행이지/동남아4.jpg" alt="동남아4">
+                    <div class="text">
+                        <span>🎫<b>쿠폰</b>혜택</span>
+                        <h3>[푸켓 패키지] 오션뷰UP 5성급 나마카 리조트 / 힐링마사지 / 나이트마켓 / 올드타운 관광 5일</h3>
+                        <p>599,000원</p>
+                        <div class="price">
+                            <p>30,000원</p>
+                            <strong> 569,000 원~</strong>
+                        </div><!-- price end -->
+                    </div><!-- text -->
+                </div><!-- item -->
+            </div><!-- item_wrap -->
+        </div><!-- inner -->
+    </div><!-- wrap end -->
+</body>
+
+</html>
